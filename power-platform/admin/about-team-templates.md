@@ -1,21 +1,25 @@
 ---
 title: "About team templates  | MicrosoftDocs"
 description: About team templates 
-author: jimholtz
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 09/30/2017
-ms.author: jimholtz
+author: jayasreekumar
+ms.author: jkumar
+ms.reviewer: jimholtz
+ms.custom: "admin-security"
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # About collaborating with team templates
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Using teams is optional, however, teams give you an easy way to share information and collaborate with users across business units. A team is a group of users. As a group, you will be able to track information about the records and perform assigned tasks in much more efficient and coordinated way. While a team belongs to only one business unit, it can include users from other business units. A user can be associated with more than one team.
   

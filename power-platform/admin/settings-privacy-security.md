@@ -1,6 +1,6 @@
 ---
 title: "Manage privacy and security settings   | MicrosoftDocs"
-description: View and manage privacy and security settings for Common Data Service.
+description: View and manage privacy and security settings for Microsoft Dataverse.
 author: jimholtz
 manager: kvivek
 ms.service: power-platform
@@ -10,16 +10,17 @@ ms.date: 10/8/2019
 ms.author: jimholtz 
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Manage privacy and security settings
 
 Use these settings to adjust model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service, privacy and security.
 
-These settings can be found in the Power Platform Admin center by going to **Environments** > [select an environment] > **Settings** > **Product** > **Privacy + Security**.
+These settings can be found in the Power Platform admin center by going to **Environments** > [select an environment] > **Settings** > **Product** > **Privacy + Security**.
 
 Make sure you have the System Administrator or System Customizer security role or equivalent permissions to update the business closures.
 

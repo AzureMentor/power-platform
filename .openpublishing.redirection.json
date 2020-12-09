@@ -1,144 +1,234 @@
 {
   "redirections": [
     {
-      "source_path": "power-virtual-agents/extend-custom-canvas-upload.md",
-      "redirect_url": "extend-custom-canvas-connect",
+      "source_path": "power-platform/admin/onpremises-server-cipher-tls-requirements.md",
+      "redirect_url": "server-cipher-tls-requirements",
       "redirect_document_id": "false"
-
+    },
+    {
+      "source_path": "power-platform/important-changes-coming.md#service-scheduling-in-dynamics-365-customer-service-is-deprecated",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/customer-service/deprecations-customer-service#service-scheduling-in-dynamics-365-customer-service-is-deprecated",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-platform/important-changes-coming.md#contracts-contract-line-items-and-contract-templates-entities-are-deprecated",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/customer-service/deprecations-customer-service#contracts-contract-line-items-and-contract-templates-entities-are-deprecated",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-platform/important-changes-coming.md#standard-slas-in-dynamics-365-customer-service-are-deprecated",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/customer-service/deprecations-customer-service#standard-slas-in-dynamics-365-customer-service-are-deprecated",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "power-platform/admin/embed-app-teams.md",
+      "redirect_url": "https://docs.microsoft.com/powerapps/teams/overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-platform/admin/wp-connectors.md",
+      "redirect_url": "https://docs.microsoft.com/powerapps/maker/canvas-apps/connections-list",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-platform/admin/wp-cds-for-apps.md",
+      "redirect_url": "https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-platform/admin/wp-types-powerapps.md",
+      "redirect_url": "https://docs.microsoft.com/powerapps/maker/",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-platform/admin/wp-solution-packages.md",
+      "redirect_url": "https://docs.microsoft.com/powerapps/powerapps-overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-platform/admin/wp-about-flows.md",
+      "redirect_url": "https://docs.microsoft.com/power-automate/getting-started",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-platform/admin/wp-environments.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/environments-overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-platform/alm/environment-and-tenant-migration.md",
+      "redirect_url": "https://docs.microsoft.com/powerapps/maker/common-data-service/export-solutions",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-platform/admin/admin-centers.md",
+      "redirect_url": "wp-work-with-admin-portals",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-platform/admin/wp-powerapps-platform-overview.md",
+      "redirect_url": "https://docs.microsoft.com/powerapps/powerapps-overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-platform/admin/wp-deployment-scenarios.md",
+      "redirect_url": "../alm/implement-healthy-alm",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-platform/admin/introduction-to-data-groups.md",
+      "redirect_url": "wp-data-loss-prevention",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-platform/admin/preview-october-2019-updates.md",
+      "redirect_url": "opt-in-early-access-updates",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-virtual-agents/extend-custom-canvas-upload.md",
+      "redirect_url": "customize-default-canvas",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "power-virtual-agents/extend-custom-canvas-connect.md",
+      "redirect_url": "customize-default-canvas",
+      "redirect_document_id": "true"
     },
     {
       "source_path": "power-platform/admin/provision-environment.md",
       "redirect_url": "create-environment",
       "redirect_document_id": "false"
-
     },
     {
       "source_path": "power-platform/admin/wp-licensing-faq.md",
       "redirect_url": "/power-platform/admin/powerapps-flow-licensing-faq",
       "redirect_document_id": "false"
-      
     },
     {
       "source_path": "power-virtual-agents/expanding-design-canvas.md",
       "redirect_url": "authoring-create-edit-topics",
       "redirect_document_id": "false"
-
     },
     {
       "source_path": "power-virtual-agents/faq.md",
       "redirect_url": "index",
       "redirect_document_id": "false"
-
     },
     {
       "source_path": "power-virtual-agents/getting-started-analytics.md",
       "redirect_url": "analytics-overview",
-      "redirect_document_id": "true"
-
+      "redirect_document_id": "false"
     },
     {
       "source_path": "power-virtual-agents/getting-started-bot-designer.md",
       "redirect_url": "authoring-fundamentals",
-      "redirect_document_id": "true"
-
+      "redirect_document_id": "false"
     },
     {
       "source_path": "power-virtual-agents/getting-started-create-bot.md",
       "redirect_url": "authoring-first-bot",
-      "redirect_document_id": "true"
-
+      "redirect_document_id": "false"
     },
     {
       "source_path": "power-virtual-agents/getting-started-create-greeting.md",
       "redirect_url": "authoring-first-bot",
       "redirect_document_id": "false"
-
     },
     {
       "source_path": "power-virtual-agents/getting-started-create-topics.md",
       "redirect_url": "authoring-create-edit-topics",
-      "redirect_document_id": "true"
-
+      "redirect_document_id": "false"
     },
     {
       "source_path": "power-virtual-agents/getting-started-delete-bot.md",
       "redirect_url": "authoring-first-bot",
       "redirect_document_id": "false"
-
     },
     {
       "source_path": "power-virtual-agents/getting-started-deploy.md",
       "redirect_url": "publication-fundamentals-publish-channels",
-      "redirect_document_id": "true"
-
+      "redirect_document_id": "false"
     },
     {
       "source_path": "power-virtual-agents/getting-started-new-environment.md",
       "redirect_url": "environments-fundamentals",
-      "redirect_document_id": "true"
-
+      "redirect_document_id": "false"
     },
     {
       "source_path": "power-virtual-agents/how-to-flow.md",
       "redirect_url": "advanced-flow",
-      "redirect_document_id": "true"
-
+      "redirect_document_id": "false"
     },
     {
       "source_path": "power-virtual-agents/how-to-handoff.md",
       "redirect_url": "advanced-hand-off",
-      "redirect_document_id": "true"
-
+      "redirect_document_id": "false"
     },
     {
       "source_path": "power-virtual-agents/how-to-templates.md",
       "redirect_url": "authoring-template-topics",
-      "redirect_document_id": "true"
-
+      "redirect_document_id": "false"
     },
     {
       "source_path": "power-virtual-agents/how-to-test-bot.md",
       "redirect_url": "authoring-first-bot",
       "redirect_document_id": "false"
-
     },
     {
       "source_path": "power-virtual-agents/how-to-variables.md",
       "redirect_url": "authoring-variables",
       "redirect_document_id": "false"
-
     },
     {
       "source_path": "power-virtual-agents/overview.md",
       "redirect_url": "fundamentals-what-is-power-virtual-agents",
-      "redirect_document_id": "true"
-
+      "redirect_document_id": "false"
     },
     {
       "source_path": "power-virtual-agents/quickstart.md",
       "redirect_url": "fundamentals-get-started",
-      "redirect_document_id": "true"
-
+      "redirect_document_id": "false"
     },
     {
       "source_path": "power-virtual-agents/topic-checker.md",
       "redirect_url": "authoring-create-edit-topics",
       "redirect_document_id": "false"
-
     },
     {
       "source_path": "power-virtual-agents/videos.md",
       "redirect_url": "index",
       "redirect_document_id": "false"
-
     },
     {
       "source_path": "power-virtual-agents/how-to-use-dispatcher.md",
       "redirect_url": "index",
       "redirect_document_id": "false"
-
+    },
+    {
+      "source_path": "power-platform/admin/index.md",
+      "redirect_url": "/power-platform/admin/admin-documentation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "power-platform/admin/preview-april-2019-updates.md",
+      "redirect_url": "preview-october-2019-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "power-platform/admin/synchronize-user-information-active-directory.md",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/customerengagement/on-premises/admin/synchronize-user-information-active-directory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "power-platform/admin/wp-controlling-access.md",
+      "redirect_url": "wp-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "power-platform/flow/index.md",
+      "redirect_url": "/power-platform/flow/stub",
+      "redirect_document_id": false
     }
-
-
   ]
 }

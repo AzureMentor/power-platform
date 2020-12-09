@@ -1,14 +1,14 @@
 ---
-title: "Find community help and get support for Power Virtual Agents"
+title: "Find community help and get support"
 description: "Use the Power Virtual Agents community forums to ask and get help and trips and ideas, or get support directly from Microsoft."
-ms.date: 12/2/2019
-ms.service:
-  - "dynamics-365-ai"
+keywords: "PVA"
+ms.date: 9/22/2020
+ms.service: power-virtual-agents
 ms.topic: article
 author: iaanw
 ms.author: iawilt
 manager: shellyha
-ms.custom: "fundamentals"
+ms.custom: "fundamentals, ceX"
 ms.collection: virtual-agent
 ---
 
@@ -27,6 +27,11 @@ Check community forums to see if other users have posted a solution that might h
 - [Submit an idea](https://go.microsoft.com/fwlink/?linkid=2064961)
     
     Do you have a great idea that will make Power Virtual Agents even better? We'd love to hear from you!
+    
+## Prerequisites
+
+- [!INCLUDE [Medical and emergency usage](includes/pva-usage-limitations.md)]
+
 
 ## Microsoft support
 

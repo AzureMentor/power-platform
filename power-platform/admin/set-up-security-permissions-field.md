@@ -1,23 +1,27 @@
 ---
 title: "Set up security permissions for a field  | MicrosoftDocs"
 description: Set up security permissions for a field
-author: jimholtz
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 09/30/2017
-ms.author: jimholtz
+ms.date: 03/30/2020
+author: jayasreekumar
+ms.author: jkumar
+ms.reviewer: jimholtz
+ms.custom: "admin-security"
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Set up security permissions for a field 
 
-[!INCLUDE [cc-settings-moving](../includes/cc-settings-moving.md)] 
+<!-- legacy procedure -->
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 You can restrict access to a field by creating a field security profile. After you create the profile, you assign users and or teams to that profile, and set up specific read, create, or write permissions for the field.  
   
@@ -31,7 +35,7 @@ You can restrict access to a field by creating a field security profile. After y
   
    - [!INCLUDE[proc_dont_have_correct_permissions](../includes/proc-dont-have-correct-permissions.md)]  
   
-2. [!INCLUDE[proc_settings_security](../includes/proc-settings-security.md)]  
+2. In the web app, go to **Settings** > **Security**.
   
 3. Click **Field Security Profiles**, and then on the command bar, click **New**.  
   

@@ -1,20 +1,25 @@
 ---
-title: "Advanced authoring in Power Virtual Agents"
-description: "Go beyond basic authoring by using slot filling, entitie, variables, sign-in, live hand-off, and Power Automate flows."
-keywords: ""
-ms.date: 11/16/2019
-ms.service:
-  - dynamics-365-ai
+title: "Advanced authoring of chatbots"
+description: "Go beyond basic authoring by using slot filling, entities, variables, sign-in, live hand-off, and Power Automate flows."
+keywords: "PVA"
+ms.date: 9/22/2020
+ms.service: power-virtual-agents
 ms.topic: article
 author: iaanw
 ms.author: iawilt
 manager: shellyha
-ms.custom: "authoring, fundamentals, advanced"
+ms.custom: "authoring, fundamentals, advanced-authoring, ceX"
 ms.collection: virtual-agent
 ---
 
 
 # Key concepts - Enhanced authoring in Power Virtual Agents
+
+Select the version of Power Virtual Agents you're using here:
+
+> [!div class="op_single_selector"]
+> - [Power Virtual Agents web app](advanced-fundamentals.md)
+> - [Power Virtual Agents app in Microsoft Teams](teams/advanced-fundamentals-teams.md)
 
 You can go beyond basic authoring in Power Virtual Agents by taking advantage of a number of advanced features. These features enhance and improve upon the [authoring experience](authoring-fundamentals.md) by letting you:
 - Expand the types of information the bot understands and can parse back
@@ -23,6 +28,11 @@ You can go beyond basic authoring in Power Virtual Agents by taking advantage of
 - Allow users to sign in directly within a bot, and then use that authentication to retrieve information from backend systems
 - Use advanced Power Automate flows to retrieve and send information to other databases
 - Add special nodes that take the context of the entire bot conversation and share it with a human help support agent
+
+
+## Prerequisites
+
+- [!INCLUDE [Medical and emergency usage](includes/pva-usage-limitations.md)]
 
 
 

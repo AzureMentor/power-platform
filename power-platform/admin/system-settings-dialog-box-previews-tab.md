@@ -2,26 +2,26 @@
 title: "System Settings Previews tab  | MicrosoftDocs"
 description: System Settings Previews tab 
 author: jimholtz
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 06/04/2018
+ms.date: 09/11/2020
 ms.author: jimholtz
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # System Settings Previews tab
 
-Use the settings on this page to enable preview features in model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service.
+Use the settings on this page to enable preview features in customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation).
 
-[!INCLUDE [cc-settings-moving](../includes/cc-settings-moving.md)] 
+<!-- legacy procedure -->
   
-## Open the System Settings dialog box (if it’s not already open)  
+## Open the System Settings dialog box 
   
 1. [!INCLUDE[proc_permissions_system_admin_and_customizer](../includes/proc-permissions-system-admin-and-customizer.md)]  
   
@@ -31,7 +31,7 @@ Use the settings on this page to enable preview features in model-driven apps in
   
    - [!INCLUDE[proc_dont_have_correct_permissions](../includes/proc-dont-have-correct-permissions.md)]  
   
-2. [!INCLUDE[proc_settings_administration](../includes/proc-settings-administration.md)]  
+2. In the web app, go to **Settings** > **Administration**.
   
 3. Choose the **System Settings** > **Previews** tab.  
   

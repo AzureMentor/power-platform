@@ -1,23 +1,31 @@
 ---
-title: "Check your Power Virtual Agents bot with the Test bot"
+title: "Check your chatbot with the Test bot"
 description: "The Test bot lets you check how well your topics are working, and lets you navigate topic nodes."
-keywords: ""
-ms.date: 11/13/2019
-ms.service:
-  - dynamics-365-ai
+keywords: "PVA"
+ms.date: 9/22/2020
+ms.service: power-virtual-agents
 ms.topic: article
 author: iaanw
 ms.author: iawilt
 manager: shellyha
-ms.custom: authoring
+ms.custom: authoring, ceX
 ms.collection: virtual-agent
 ---
 
 # Test your Power Virtual Agents bot
 
-As you design your bot in Power Virtual Agents for Customer Service, you can use the **Test bot** pane to see how the bot leads a customer through the bot conversation. 
+> [!div class="op_single_selector"]
+> - [Power Virtual Agents web app](authoring-test-bot.md)
+> - [Power Virtual Agents app in Microsoft Teams](teams/authoring-test-bot-teams.md)
+
+As you design your bot in Power Virtual Agents, you can use the **Test bot** pane to see how the bot leads a customer through the bot conversation. 
 
 To help you find and fix unexpected behavior, you can enable tracking between topics to take you through the bot conversation step-by-step, and go to the corresponding node in the authoring canvas.
+
+## Prerequisites
+
+- [!INCLUDE [Medical and emergency usage](includes/pva-usage-limitations.md)]
+
 
 ## Test a topic in the Test bot pane
 
@@ -25,7 +33,7 @@ To help you find and fix unexpected behavior, you can enable tracking between to
 
    ![The Test your bot button is at the bottom of the side navigation pane](media/test-bot-menu.png)
 
-1. To make sure you're using the most current bot content, select **Reset** at the top of the **Test bot** pane. This will load any changes you've made to topics, and will clear any previous conversation in the test pane.
+1. It's a good idea to select **Reset** at the top of the **Test bot** pane to clear previous conversations. Clearing previous conversations makes it easier to see the flow of the topic you want to see without getting confused by previous conversations.
 
    ![Click Reset at the top of the Test bot pane to clear conversation history](media/test-bot-reset.png)
 
@@ -46,10 +54,6 @@ You can return to the authoring canvas for the topic  at any time to revise it's
 ## Track through the topic's conversation path
 
 As you fine-tune your bot, it can be useful to enable tracking between topics so you can follow through the conversation path step by step.
-
-1. If the **Test bot** pane is hidden, open it by selecting **Test your bot**.
-
-   ![The Test your bot button is at the bottom of the side navigation pane](media/test-bot-menu.png)
 
 
 1. At the top of the **Test bot** pane, set **Track between topics** to **On**.

@@ -2,45 +2,57 @@
 title: "Get Help + Support   | MicrosoftDocs"
 description: Use the Help + support experience to contact a Microsoft support representative to get resolution for your issue.
 author: jimholtz
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 05/28/2019
+ms.date: 12/01/2020
 ms.author: jimholtz 
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Get Help + Support 
 
-Admins you can use the **Help + support** experience in the [Power Platform Admin center](admin-documentation.md) to get self-help solutions in ***real-time*** for their issue. If the issue can't be resolved through self-help, you can use the same **Help + support** experience to contact a Microsoft support representative. 
+Admins can use the **Help + support** experience in the [Power Platform admin center](admin-documentation.md) to get self-help solutions in ***real-time*** for their issue. If the issue can't be resolved through self-help, you can use the same **Help + support** experience to contact a Microsoft support representative. 
 
 An example of solutions provided for Dynamics 365 App for Outlook issues:
 
 > [!div class="mx-imgBorder"] 
-> ![](media/support-solutions-list.png "List of possible solutions")
+> ![List of possible solutions](media/support-solutions-list.png "List of possible solutions")
 
 ### Prerequisites
 
--  You have one of the following Office 365 admin roles to enter support requests:
- 
-   - Global
-   - Tenant
-   - Service
-   - Support
-   - Billing
+- You have a security role that is enabled for creating support requests. Users having one of these security roles can create support requests:
 
--  For the following [support plans](https://www.microsoft.com/dynamics365/support):
+  - AAD Role Admin
+  - Power Apps Full Admin
+  - Power Apps Environment Admin (Environment Admin, System Admin)
+  - Company Admin
+  - Billing Admin
+  - Service Admin
+  - CRM Service Admin
+  - Power Platform Admin  
+  - Security Admin
+  - CRM Organization Admin
+  - Partner Delegated Admin
+  - SharePoint Admin
+  - Teams Admin
+  - Exchange Admin
+  - Power BI Admin
+  - Compliance Admin
+  - Helpdesk Admin
+
+- For the following [support plans](https://www.microsoft.com/dynamics365/support):
    
-   - Subscription Support
-   - Enhanced Support
-   - Professional Direct Support
-   - Premier Support
-   - Unified Support
+  - Subscription Support
+  - Enhanced Support
+  - Professional Direct Support
+  - Premier Support
+  - Unified Support
 
 > [!NOTE]
 > In the following cases, you might not be able to create a support request or we can't provide relevant solutions:
@@ -54,7 +66,7 @@ An example of solutions provided for Dynamics 365 App for Outlook issues:
 
 ### View solutions or enter a support request through the new support center
 
-1. Sign in to the [Power Platform Admin center](https://admin.powerplatform.microsoft.com/) with your admin credentials.
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) with your admin credentials.
 
 2. Select **Help + support** > **New support request**.
 
@@ -63,19 +75,22 @@ An example of solutions provided for Dynamics 365 App for Outlook issues:
 3. Select the product with the issue. Fill in the problem type, a description of the issue, and then select **See solutions**.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/create-support-ticket.png "See solutions")
+   > ![See solutions](media/create-support-ticket.png "See solutions")
 
    Based on the information you provided, you'll see a list of possible solutions to your issue. Select the relevant solution and see if the content can successfully guide you to a fix. 
 
 4. If the guidance doesn't resolve your issue, scroll down and select **Create a support request** and fill in the fields in the form pages.
 
+   > [!NOTE]
+   > If you have one of the plans listed in [Prerequisites](#prerequisites), you can set the severity to a higher level than **Minimal**.
+
    > [!div class="mx-imgBorder"] 
-   > ![](media/support-request-page2.png "Create a new support request")
+   > ![Create a new support request](media/support-request-page2.png "Create a new support request")
 
 5. If you have a **Premier** support plan, select **Yes** for **File as a Premier support request?** and fill in the fields. If you don't know your access or contract ID, please contact your service admin or Technical Account Manager (TAM).
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/premier-support.png "Premier support info")
+   > ![Premier support info](media/premier-support.png "Premier support info")
 
 > [!NOTE]
 > - For **Contract ID/Password**, please enter your Premier contract ID. 
@@ -97,6 +112,17 @@ Fill out the pages and then submit to have your support request receive an exped
 ![Fill in outage info](media/report-outage-page-one.png "Fill in outage info")
 
 We'd love to know your thoughts on the new outage reporting process. Or, if you'd like to be considered for this limited Preview, please fill out this [form](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR-5Axi2KMXdNi_1eF9P36tZUN1FUQkJLNVBZVVlOSVk0T0tIQTBIMk9VOC4u).
+
+## For app-specific issues
+To get the fastest response time for issues you encounter with a preview or production release of a specific customer engagement app or add-on, create a support request for the specific application from the **Application and Add-ons** menu.   
+
+> [!div class="mx-imgBorder"] 
+> ![Select from this list for app issues](media/support-use-applications-addons.png "Select from this list for app issues")
+
+Do **not** select topics from **Administration Center** as this can result in lost time in routing your support request properly. 
+
+> [!div class="mx-imgBorder"] 
+> ![Don't select from this list for app issues](media/support-dont-use-administration-center.png "Don't select from this list for app issues")
 
 ### See also
 [Support overview](support-overview.md)<br />

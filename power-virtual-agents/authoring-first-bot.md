@@ -1,25 +1,46 @@
 ---
-title: "Create conversational bots in Power Virtual Agents"
+title: "Create conversational chatbots"
 description: "You can easily create new bots using the bot-builder wizard in Power Virtual Agents."
-keywords: ""
-ms.date: 12/12/2019
-ms.service:
-  - dynamics-365-ai
+keywords: "PVA"
+ms.date: 9/22/2020
+ms.service: power-virtual-agents
 ms.topic: article
 author: iaanw
 ms.author: iawilt
 manager: shellyha
-ms.custom: onboarding
+ms.custom: onboarding, ceX
 ms.collection: virtual-agent
+searchScope:
+  - "Power Virtual Agents"
 ---
 
-# Create your first Power Virtual Agents bot
+# Create and delete Power Virtual Agents bots
+
+Select the version of Power Virtual Agents you're using here:
+
+> [!div class="op_single_selector"]
+> - [Power Virtual Agents web app](authoring-first-bot.md)
+> - [Power Virtual Agents app in Microsoft Teams](teams/authoring-first-bot-teams.md)
 
 To help get you started and tailor the bot to your specific needs, Power Virtual Agents lets you create a bot using built-in content building blocks containing topics, trigger phrases, and pre-authored bot conversations.
 
-**Create your first bot:**
+>[!NOTE]
+>You can only see bots in the version of Power Virtual Agents where you created them.  
+>This means if you create a bot with the Power Virtual Agents app in Microsoft Teams, you will not see the bot in the web app of Power Virtual Agents at https://powerva.microsoft.com.
 
-1. Go to [Power Virtual Agents marketing page](https://go.microsoft.com/fwlink/?linkid=2106332) and select **Try Preview**. Sign in using your work account.
+
+ 
+
+## Prerequisites
+
+- [!INCLUDE [Medical and emergency usage](includes/pva-usage-limitations.md)]
+
+
+## Create your first bot
+
+Creating your first bot requires you to have a license (or trial) to Power Virtual Agents.
+
+1. Go to [Power Virtual Agents marketing page](https://go.microsoft.com/fwlink/?linkid=2106332) and select **Start free**. Sign in using your work account.
 
    If you don't have a license, you can sign up for one by following the prompts.
     
@@ -27,7 +48,7 @@ To help get you started and tailor the bot to your specific needs, Power Virtual
 
    ![New bot dialog](media/create-new-bot-screen.png)
 
-1. Your virtual agent is created in the [default Power Apps environment for your organization or tenant](environments-first-run-experience.md). Usually this is sufficient, but if necessary you can choose a different environment by selecting **More options** to see a list of available environments.
+1. Your bot is created in the [default Power Apps environment for your organization or tenant](environments-first-run-experience.md). Usually this is sufficient, but if necessary you can choose a different environment by selecting **More options** to see a list of available environments.
   
 1. Select **Create** to begin the bot-building process, which can take up to 15 minutes for the first bot you create in an environment. Subsequent bots take less than a few minutes to create.
 
@@ -35,7 +56,6 @@ To help get you started and tailor the bot to your specific needs, Power Virtual
 During the building process, you'll see a notification at the top of the Power Virtual Agents portal indicating that the bot is still being built.
 
 You can navigate to some tabs during this period, after which the banner will change and you'll have full access to the Power Virtual Agents portal. 
- 
 
 ## Create additional bots
 

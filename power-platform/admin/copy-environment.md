@@ -2,33 +2,32 @@
 title: "Copy an environment to a sandbox environment  | MicrosoftDocs"
 description: Learn how to copy a sandbox environment. 
 author: jimholtz
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 01/15/2020
+ms.date: 12/02/2020
 ms.author: jimholtz
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Copy an environment
 
-You can use Copy environment in the Power Platform Admin center to copy the model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service, and all data from any environment to a sandbox environment. You can select two levels of copy: **Everything** or **Customizations and schemas only**.  
+You can use Copy environment in the Power Platform admin center to copy the customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), and all data from any environment to a sandbox environment. You can select two levels of copy: **Everything** or **Customizations and schemas only**.  
 
 > [!div class="mx-imgBorder"] 
-> ![](media/copy-menu.png "Copy menu")
+> ![Copy menu](media/copy-menu.png "Copy menu")
 
 > [!NOTE]
 > - You can only copy an environment to a sandbox environment.
-> - The source and destination environments must be in the same region.
+> - You can only copy to a sandbox environment in the same tenant and region.
 > - Currently, any components that have not been added to a solution (including canvas apps, flows, custom connectors, and connections) will not be copied to the target environment.
 > - You cannot copy from or to a default environment.
-
-
+> - You must have at least 1 GB of [storage capacity](whats-new-storage.md) to copy an environment.
   
 ## Copy over everything
  An Everything copy includes all application data, users, and customizations, and schemas from the source environment and is suitable for:  
@@ -40,12 +39,12 @@ You can use Copy environment in the Power Platform Admin center to copy the mode
   
 **An example scenario**  
   
-Isaac, a business application developer, has received a request from the sales department to configure and deploy a social media integration solution from another company vendor.  Isaac has never installed a solution from this vendor and is unsure what impact this would have on the production application.  He’d like to import the solution into an environment that is nearly identical to, but isolated from, production to learn about the solution and make the appropriate configuration changes. Isaac submits a request to Thomas, the IT Manager for Contoso, to create an Everything copy sandbox environment for him.  
+Isaac, a business application developer, has received a request from the sales department to configure and deploy a social media integration solution from another company vendor.  Isaac has never installed a solution from this vendor and is unsure what impact this would have on the production application. Isaac would like to import the solution into an environment that is nearly identical to, but isolated from, production to learn about the solution and make the appropriate configuration changes. Isaac submits a request to Thomas, the IT Manager for Contoso, to create an Everything copy sandbox environment for him.  
   
 After the Everything copy is complete, Isaac receives a mail from Thomas telling him the sandbox environment is ready.  Isaac logs into the sandbox environment and makes the necessary changes to make sure that production external services will not be impacted by the sandbox environment.  Once changes are complete, Isaac turns off administration mode and enables background services.  Isaac is able to use the Everything copy sandbox environment to do his testing and later manually import the solution into production.  
   
 ## Copy over customizations and schemas only 
- A Customizations and schemas only copy only includes users, customizations, and schema from the source environment and is suitable for:  
+ Customizations and schemas copy only includes users, customizations, and schema from the source environment and is suitable for:  
   
 - Iterative team development  
 - Partner/ISV solutions  
@@ -53,9 +52,9 @@ After the Everything copy is complete, Isaac receives a mail from Thomas telling
   
 **An example scenario**  
   
-Isaac has a large development project starting next week for the sales department.  He has a team of developers ready to start on the project, some of whom are internal to Contoso and some are external vendors. The Contoso sales application contains Personally Identifiable Information (PII) that the sales manager has explicitly stated must not be made available to any external parties for privacy and legal liability reasons.  Isaac requests a customizations and schemas only copy sandbox environment that does not contain any production data or users. In addition, Isaac creates a Office 365 security group to give the development team access to the sandbox environment.  
+Isaac has a large development project starting next week for the sales department.  He has a team of developers ready to start on the project, some of whom are internal to Contoso and some are external vendors. The Contoso sales application contains Personally Identifiable Information (PII) that the sales manager has explicitly stated must not be made available to any external parties for privacy and legal liability reasons.  Isaac requests customizations and schemas only copy sandbox environment that does not contain any production data or users. In addition, Isaac creates a Microsoft 365 security group to give the development team access to the sandbox environment.  
   
-After modifying and enabling some of the plug-ins, the developer sandbox environment functions the same and is completely isolated from the production application.  The development team works on their modifications in this environment for several weeks.  They package their changes into a solution and export/import to deploy to the Everything copy sandbox environment.  After a successful round of testing and signoffs, the changes are manually deployed to production.  
+After modifying and enabling some of the plug-ins, the developer sandbox environment functions the same and is isolated from the production application.  The development team works on their modifications in this environment for several weeks.  They package their changes into a solution and export/import to deploy to the Everything copy sandbox environment.  After a successful round of testing and signoffs, the changes are manually deployed to production.  
   
 ### Entities copied in a Customizations and schemas only copy  
  The following entities are copied when you do a Customizations and schemas only copy:  
@@ -75,12 +74,15 @@ After modifying and enabling some of the plug-ins, the developer sandbox environ
 |Mailbox|  
 |Organization|  
 |Position|  
+|Queues|
+|QueueMembership|
 |Report|  
 |Resource|  
 |ResourceGroup|  
 |Role|  
 |RollupField|  
 |SavedQuery|  
+|Sites|
 |SLAKPIenvironment|  
 |Solution|  
 |Subject|  
@@ -91,7 +93,7 @@ After modifying and enabling some of the plug-ins, the developer sandbox environ
 
 ## Copy an environment to a sandbox environment
   
-1. Go to the [Power Platform Admin center](https://admin.powerplatform.microsoft.com) and sign in using Environment Admin or System Administrator role credentials.
+1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com) and sign in using Environment Admin or System Administrator role credentials.
   
    > [!NOTE]
    > Environment Admins or System Administrators can copy all available environments. System administrators can copy environments for which they have the Environment Admin or System Administrator role.  
@@ -103,7 +105,7 @@ After modifying and enabling some of the plug-ins, the developer sandbox environ
 4. Select the desired copy over level.
   
    > [!div class="mx-imgBorder"] 
-   > ![](media/copy-environment1.png "Copy environment")
+   > ![Copy environment](media/copy-environment1.png "Copy environment")
 
 5. Select a sandbox environment.
   
@@ -117,14 +119,14 @@ After modifying and enabling some of the plug-ins, the developer sandbox environ
 7. Edit the details for the copied environment, and then select **Copy**.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/copy-environment2.png "Copy environment")
+   > ![Copy environment](media/copy-environment2.png "Copy environment")
 
 8. Select **Confirm** to overwrite the target environment.
 
 The overwrite process starts.
 
 > [!div class="mx-imgBorder"] 
-> ![](media/copy-environment-status.png "Copy environment status")
+> ![Copy environment status](media/copy-environment-status.png "Copy environment status")
   
 Once the copy process is complete, the target environment is placed in [Administration mode](sandbox-environments.md#administration-mode) and background operations are disabled. The next section describes recommended Administrator actions for the newly created copy (target) environment.  
  
@@ -159,12 +161,25 @@ Once the copy process is complete, the target environment is placed in [Administ
   
 - **Yammer**. Disable Yammer or redirect to a separate Yammer service to prevent posts made in the copy environment conflicting with posts made in the production environment. Go to **Settings** > **Administration** > **Yammer Configuration**.  
   
-     After creating a new sandbox environment, workflows and system jobs might be pending execution. Apart from these jobs, if you have connected Yammer to model-driven apps in Dynamics 365 there will be Yammer activity streams posted from model-driven apps in Dynamics 365 to Yammer asynchronously. These activity streams are not visible through the system jobs. If there were any pending Yammer activity streams before the Disable Background Process is turned on, these activity steams will be posted to the current Yammer configuration once the Disable Background Process is turned back off. In the sandbox environment, if you have your current Yammer configuration connected to the same Yammer network as your production environment, you might see duplicate activity streams. To avoid duplicate Yammer activity streams, redirect your sandbox environment to another Yammer network (possibly a test network) before turning background processes back on.  
+     After creating a new sandbox environment, workflows and system jobs might be pending execution. Apart from these jobs, if you have connected Yammer to customer engagement apps there will be Yammer activity streams posted from customer engagement apps to Yammer asynchronously. These activity streams are not visible through the system jobs. If there were any pending Yammer activity streams before the Disable Background Process is turned on, these activity steams will be posted to the current Yammer configuration once the Disable Background Process is turned back off. In the sandbox environment, if you have your current Yammer configuration connected to the same Yammer network as your production environment, you might see duplicate activity streams. To avoid duplicate Yammer activity streams, redirect your sandbox environment to another Yammer network (possibly a test network) before turning background processes back on.  
   
 - **Platform extensibility**. Consider disabling the following that could be running in the copy environment and impacting external service components.  
-  
     - **Server-side plug-ins**.  
     - **Workflow custom activity**.  
+
 - **Client extensibility**. Review the following.  
     - **Client-side JavaScript**. Take a look at your JavaScript and HTML web resources for read/write operations that could impact external services.  
     - **IFRAMES**. Determine if the target of an IFRAME is a production environment.  
+
+## Known issues
+
+### Failures during a copy operation
+Power Virtual Agent resources were recently included as part of the copy operation. If you are getting consistent failures during a copy operation and you have Power Virtual Agent resources installed in the source environment, the problem might be that the Power Virtual Agent solutions are not installed in the target environment. If you explicitly uninstalled the Power Virtual Agent solutions from the target environment, you can work around this by re-installing the solutions. Otherwise, you should choose a different target environment.
+
+
+### See also  
+[What's new about storage](whats-new-storage.md) <br />
+[New Microsoft Dataverse storage capacity](capacity-storage.md) <br />
+[Legacy storage capacity](legacy-capacity-storage.md)
+
+

@@ -1,27 +1,31 @@
 ---
 title: "Use hand-off to live agent"
 description: "Learn how to hand off a bot conversation to a live human agent, complete with context and conversation history."
-ms.date: 12/12/2019
-ms.service:
-  - "dynamics-365-ai"
+keywords: "PVA"
+ms.date: 9/22/2020
+ms.service: power-virtual-agents
 ms.topic: article
-author: iaanw  
+author: iaanw 
 ms.author: iawilt
 ms.reviewer: pawant
 manager: shellyha
 ms.collection: virtual-agent
-ms.custom: handoff
+ms.custom: handoff, ceX, advanced-authoring
 ---
 
 # Trigger hand-off to a live agent
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
+
 
 With Power Virtual Agents, you can hand-off conversations to live agents seamlessly and contextually.
 
 When you hand off a conversation, you share the full history of the conversation (the context) as well as all user-defined variables. This means live agents that are using any connected engagement hub can be notified that a conversation requires a live agent, see the context of the prior conversation, and resume the conversation.
 
 For more information about how to configure hand-off with [Omnichannel for Customer Service](https://go.microsoft.com/fwlink/?linkid=2098992), see the [Configure hand-off to Omnichannel for Customer Service](configuration-hand-off-omnichannel.md) topic.
+   
+  > 
+  > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4n4G1]
+  >
 
 >[!NOTE]
 >You can choose to escalate a bot conversation without linking to an engagement hub:
@@ -33,10 +37,13 @@ For more information about how to configure hand-off with [Omnichannel for Custo
 >
 >You can edit the topic to include a simple URL to a support website or ticketing system, or to include instructions for emailing or contacting support.
 
-## Pre-requisites
+## Prerequisites
 
 - You need a bot built with [Power Virtual Agents](https://aka.ms/TryPVA)
 - You need to have an engagement hub that is being used by live agents, such as [Omnichannel for Customer Service](/dynamics365/omnichannel/try-channels), and you need to configure the connection, as described in [Configure hand-off to Omnichannel for Customer Service](configuration-hand-off-omnichannel.md).
+- [!INCLUDE [Medical and emergency usage](includes/pva-usage-limitations.md)]
+
+
 
 ## Triggering hand-off to a live agent
 Customers engaging with the bot can ask for a live agent at any point in the conversation. This can happen in two ways, with an implicit trigger or an explicit trigger.

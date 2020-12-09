@@ -1,19 +1,21 @@
 ---
 title: "Manage user account synchronization  | MicrosoftDocs"
 description: Manage user account synchronization
-author: jimholtz
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 07/17/2019
-ms.author: jimholtz
+author: jayasreekumar
+ms.author: jkumar
+ms.reviewer: jimholtz
+ms.custom: "admin-security"
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Manage user account synchronization 
 
@@ -32,11 +34,11 @@ It’s important to carefully consider which identity model to use to get up and
   
 Review the following resources to equip you to make the right decision for your company:  
   
--   [Understanding Office 365 identity and Azure Active Directory](https://go.microsoft.com/fwlink/p/?LinkID=534820)  
+-   [Microsoft 365 identity models and Azure Active Directory](https://go.microsoft.com/fwlink/p/?LinkID=534820)  
   
 -   [What is Azure AD Connect?](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)  
   
--   [Office 365 integration with on-premises environments](https://support.office.com/article/Office-365-integration-with-on-premises-environments-263faf8d-aa21-428b-aed3-2021837a4b65)  
+-   [Microsoft 365 integration with on-premises environments](https://support.office.com/article/Office-365-integration-with-on-premises-environments-263faf8d-aa21-428b-aed3-2021837a4b65)  
   
 ## Tip for admins: provide a single sign-on organization URL for your users  
  If you’ve deployed synchronization with single sign-on (option 3 above), you can provide a URL to your users that takes advantage of your company’s Active Directory and simplifies the sign-in experience.  

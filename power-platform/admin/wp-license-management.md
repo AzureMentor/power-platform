@@ -2,25 +2,25 @@
 title: "Licensing and license management  | MicrosoftDocs"
 description: About licensing and license management.
 author: dileepsinghmicrosoft
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 10/04/2019
+ms.date: 08/03/2020
 ms.author: dileeps
 ms.reviewer: jimholtz
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # About licensing and license management
 
 Organizations can obtain licenses by either licensing Microsoft Power Apps or
 Microsoft Power Automate specifically or by it being included in the license of another Microsoft
-cloud service offering. For example, both Office 365 and Dynamics 365 provide
+cloud service offering. For example, both Microsoft 365 and Dynamics 365 provide
 entitlements for Power Apps and Power Automate. As with most Microsoft licensing,
 you can mix and match for users as appropriate giving some additional
 entitlements.
@@ -49,7 +49,7 @@ For Power Automate, an unlicensed user that signs in to flow.microsoft.com will
 be setup with the free Power Automate plan. If later they try to perform an action like
 sharing a flow, they will be prompted to sign up for a trial. In this example,
 if the user accepted the offer for trial they would be signed up for a Power Automate
-trial. This trial would not show up under the user licenses in the Office 365
+trial. This trial would not show up under the user licenses in the Microsoft 365
 Portal, however you would be able to see it in the Power Apps license report
 discussed later in this security section.
 
@@ -84,21 +84,15 @@ features here <https://docs.microsoft.com/powerapps/maker/dev-community-plan>
 ## What users are licensed
 
 You can always look at individual user licensing in the Microsoft 365 admin
-center by drilling into specific users. From the Power Apps administration center
-you can also produce a report focused on Power Apps licenses. This is one of the
-steps we recommend you do right away as a new administrator trying to understand
-your current licensing.
+center by drilling into specific users. 
 
-You can download the report from [admin.powerapps.com](https://admin.powerapps.com) -\> **Tenant** -\> **User
-Licensing**
+You can also use the following PowerShell command to export assigned user licenses.
 
-> [!div class="mx-imgBorder"] 
-> ![](media/user-licenses.png "User licenses")
+```powershell
+Get-AdminPowerAppLicenses -OutputFilePath '<licenses.csv>'
+```
 
-The report is an Excel workbook that once downloaded you can use all of Excel’s
-features to filter the data to what you are looking for. The following is an
-example of the downloaded workbook.
+Exports all the assigned user licenses (Power Apps and Power Automate) in your tenant into a tabular view .csv file. The exported file contains both self-service sign up internal trial plans as well as plans that are sourced from Azure Active Directory. The internal trial plans are not visible to admins in the Microsoft 365 admin center.
 
-> [!div class="mx-imgBorder"] 
-> ![](media/user-licenses-downloaded-workbook.png "User licenses downloaded workbook")
+The export can take a while for tenants with a large number of Power Platform users.
 

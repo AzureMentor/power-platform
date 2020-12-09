@@ -6,35 +6,17 @@ manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 09/30/2017
+ms.date: 05/08/2020
 ms.author: jimholtz
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Control receiving social data
 
-[!INCLUDE [cc-settings-moving](../includes/cc-settings-moving.md)] 
-
-You can enable or disable your ability to receive social data in model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service.  
-  
-## Enable or disable social engagement  
- By default, social engagement is enabled and social data is received.  
-  
-> [!NOTE]
->  If you disable social engagement, you can no longer create or update social data in model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service. If you try to convert a social activity to a case while social engagement is disabled, you’ll get an error message. The error occurs because the **Convert To Case** action tries to update the social activity **Regarding** field. The same error occurs if you try to assign a social activity record or a social profile record to another user.  
-  
-1. [!INCLUDE[proc_settings_administration](../includes/proc-settings-administration.md)]  
-  
-2. Choose **System Settings**.  
-  
-3. Under **Disable Social Engagement**, select **Yes** to stop receiving social data. To receive data, select **No**.  
-  
-4. Choose **OK**.  
-  
-### See also  
- [Connect to Microsoft Social Engagement](../admin/connect-microsoft-social-engagement.md)   
- [Receive social data in Microsoft Dynamics CRM](https://go.microsoft.com/fwlink/p/?LinkID=392629)
+Based on market trends and strategic direction, we have decided to focus on providing insights about broader market patterns and customer trends by enhancing capabilities in other Microsoft products.
+Effective January 16, 2020, Microsoft Social Engagement was discontinued for all Dynamics 365 customers and will no longer be included as part of any Microsoft Dynamics 365 license entitlement for new customers.

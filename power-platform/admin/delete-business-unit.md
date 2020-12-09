@@ -6,18 +6,17 @@ manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 01/06/2020
+ms.date: 03/10/2020
 ms.author: jimholtz
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Delete a business unit
-
-[!INCLUDE [cc-settings-moving](../includes/cc-settings-moving.md)] 
 
 You can delete a business unit to completely remove it.  
   
@@ -26,11 +25,11 @@ You can delete a business unit to completely remove it.
 >   
 > -   Deleting a business unit is irreversible.  
 > -   The records owned by the business unit (for example: Teams, Facilities/Equipment, and Resource Groups) are deleted at the same time you delete the business unit.  
-> -   You can’t delete a business unit until you reassign all the business unit records to another business unit.  
+> -   You can't delete a business unit until you reassign all the business unit records to another business unit.  
 
-1. [!INCLUDE[proc_settings_security](../includes/proc-settings-security.md)]  
-  
-2. Choose **Business Units**.  
+1. In the Power Platform admin center, select an environment. 
+
+2. Select **Settings** > **Users + permissions** > **Business units**.  
   
 3. Click to select the business unit that you want to delete.  
   

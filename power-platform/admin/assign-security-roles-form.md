@@ -1,23 +1,27 @@
 ---
 title: "Assign security roles to a form  | MicrosoftDocs"
 description: Assign security roles to a form
-author: jimholtz
-manager: kvivek
+author: paulliew
+ms.author: paulliew
+ms.reviewer: jimholtz
+ms.custom: "admin-security"
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 09/30/2017
-ms.author: jimholtz
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Assign security roles to a form to more finely control access
 
-[!INCLUDE [cc-settings-moving](../includes/cc-settings-moving.md)] 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
+<!-- legacy procedure -->
 
 Control form and field access by assigning different security roles to different forms you create.  
   
@@ -59,7 +63,7 @@ Control form and field access by assigning different security roles to different
   
    2.  To close the **Preview** form, on the **File** menu, choose **Close**.  
   
-7. When you’re ready to save your data, choose **Save and Close**.  
+7. When you're ready to save your data, choose **Save and Close**.  
   
 8. Publish your customization.  
   

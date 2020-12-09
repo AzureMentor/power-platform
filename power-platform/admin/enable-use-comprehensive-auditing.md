@@ -1,43 +1,36 @@
 ---
-title: "Enable and use Activity Logging  | MicrosoftDocs"
-description: Learn how to enable auditing to be used for reports in the Office 365 Security Compliance Center.
-author: jimholtz
-manager: kvivek
+title: "Microsoft Dataverse and model-driven apps activity logging  | MicrosoftDocs"
+description: Learn how to enable auditing to be used for reports in the Microsoft 365 Security Compliance Center.
+author: pnghub
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 02/21/2019
-ms.author: jimholtz 
+ms.date: 10/21/2020
+ms.author: gned
+ms.reviewer: jimholtz 
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
-# Enable and use Activity Logging 
+# Microsoft Dataverse and model-driven apps activity logging 
 
-Protecting data, preserving privacy, and complying with regulations such as the [General Data Protection Regulation](https://www.microsoft.com/TrustCenter/Privacy/gdpr/default.aspx) are certainly some of the highest priorities for your business. It's critical that you audit the entirety of data processing actions taking place to be able to analyze for possible security breaches. This information from Activity Logging can be used when you perform a Data Protection Impact Assessment (DPIA) addressing the use of Office, Power Apps, Microsoft Power Automate, and model-driven apps in Dynamics 365 (such as Dynamics 365 Sales and Dynamics 365 Customer Service).  
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-This topic covers how you can set model-driven apps in Dynamics 365 to audit a broad range of data processing activities and use the [Office 365 Security and Compliance Center](https://support.office.com/article/go-to-the-office-365-security-compliance-center-7e696a40-b86b-4a20-afcc-559218b7b1b8?ui=en-US&rs=en-US&ad=US) to review the data in activity reports.
+Protecting data, preserving privacy, and complying with regulations such as the [General Data Protection Regulation](https://www.microsoft.com/TrustCenter/Privacy/gdpr/default.aspx) are certainly some of the highest priorities for your business. It's critical that you audit the entirety of data processing actions taking place to be able to analyze for possible security breaches. This information from Activity Logging can be used when you perform a Data Protection Impact Assessment (DPIA) addressing the use of Office, Power Apps, Microsoft Power Automate, and customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation)
+.  
+
+This topic covers how you can set customer engagement apps to audit a broad range of data processing activities and use the [Microsoft 365 Security and Compliance Center](https://support.office.com/article/go-to-the-office-365-security-compliance-center-7e696a40-b86b-4a20-afcc-559218b7b1b8?ui=en-US&rs=en-US&ad=US) to review the data in activity reports.
 
 ## Requirements
-- An Office 365 Enterprise [E3](https://products.office.com/business/office-365-enterprise-e3-business-software) or [E5](https://products.office.com/business/office-365-enterprise-e5-business-software) subscription is required to do Activity Logging.
+- A Microsoft 365 Enterprise [E3](https://products.office.com/business/office-365-enterprise-e3-business-software) or [E5](https://products.office.com/business/office-365-enterprise-e5-business-software) subscription is required to do Activity Logging.
 - Available for production and not sandbox environments.
 
 ## What events are audited
-Logging takes place at the SDK layer which means a single action can trigger multiple events that are logged. The following are a sample of admin and user events you can audit.
-
-### Admin-related events
-
-|Event  |Description  |
-|---------|---------|
-|Publishing customizations  |An admin publishes a new customization which overrides a change done by the previous one. The action requires auditing for analysis.    |
-|Attribute deletes     |Admin accidentally deletes an attribute. This action also deletes the data. |
-|Team, user management     |Who was added, who was deleted, what access rights a user/team had is important for analyzing impact.|
-|Configure instance     |Adding solutions to an instance.|
-|Backup and restore     |Backup and restore actions at the tenant.|
-|Manage applications     |New instance added, existing instance deleted, trials converted to paid, etc.|
+Logging takes place at the SDK layer which means a single action can trigger multiple events that are logged. The following are a sample of user events you can audit. Admin events are currently not logged.
 
 ### User and support-related events 
 
@@ -48,45 +41,13 @@ Logging takes place at the SDK layer which means a single action can trigger mul
 |Export to Excel     |Exporting data to Excel moves the data outside of the secure environment and is vulnerable to threats.|
 |SDK calls via surround or custom apps    |Actions taken via the core platform or surround apps calling into the SDK to perform an action needs to be logged.|
 |All support CRUD activities     |Microsoft support engineer activities on customer environment.|
-|Admin activities     |Admin activities on customer tenant.|
 |Backend commands     |Microsoft support engineer activities on customer tenant and environment.|
 |Report Viewed  |Logging when a report is viewed. Critical customer content information might be displayed on the report.  |
 |Report Viewer Export  |Exporting a report to different formats moves the data outside of the secure environment and is vulnerable to threats.  |
 |Report Viewer Render Image  |Logging multimedia assets that are shown when a report is displayed. They might contain critical customer information.  |
 
-### Microsoft Social Engagement logging   
-
-The following Microsoft Social Engagement (MSE) entities and actions are logged.
-
-|MSE entity  |MSE pages/panels/controls logged  |
-|---------|---------|
-|Search Topic Category      |Create, Rename, Delete          |
-|Search Topic      |Create, Update, Delete          |
-|Custom Source      |Create, Update, Delete           |
-|Blocked Keyword      |Add, Delete          |
-|Blocked Domain      |Add, Delete          |
-|Stream      |Create, Update, Delete         |
-|Post (acquired)   |Internal & External Actions   |
-|Post (published)   |Send   |
-|Author   |Add (GDPR), Delete (GDPR), Delete   |
-|Activity Map   |Create, Update, Delete   |
-|Alert   |Create, Update, Delete   |
-|Preference   |Update   |
-|Social Profile   |Create, Update, Reauthenticate, Delete   |
-|User   |Edit Role, E-mail   |
-|Azure Event Hubs   |Create, Update, Delete   |
-|Model-driven apps in Dynamics 365  |Create, Update, Refresh, Delete   |
-|Allowed Domain   |Add, Delete   |
-|Automation Rule   |Create, Update, Delete   |
-|AR Notification   |Enable, Disable   |
-|Tag   |Add, Update, Delete   |
-|Label   |Add, Update Delete    |
-|Search Language   |Add, Delete   |
-|Adaptive Sentiment   |Enable, Disable, Reset   |
-|Other Global Settings   |Update   |
-
 ## Base schema
-Schemas define which fields are sent to the Office 365 Security and Compliance Center.  Some fields are common to all applications that send audit data to Office 365, while others are specific to model-driven apps in Dynamics 365. The Base schema contains the common fields. 
+Schemas define which fields are sent to the Microsoft 365 Security and Compliance Center.  Some fields are common to all applications that send audit data to Microsoft 365, while others are specific to customer engagement apps. The Base schema contains the common fields. 
 
 |Field name  |Type  |Mandatory  |Description  |
 |---------|---------|---------|---------|
@@ -100,11 +61,11 @@ Schemas define which fields are sent to the Office 365 Security and Compliance C
 |CreationTime     |Edm.Date         |No         |Date and time of when the log was generated in UTC          |
 |Operation     |Edm.Date         |No         |Name of the message called in the SDK          |
 |UserKey     |Edm.String         |No         |Unique Identifier of the User in AAD. AKA User PUID          |
-|UserType     |Self.UserType         |No         |The Office 365 audit type (Admin, Regular, System)          |
+|UserType     |Self.UserType         |No         |The Microsoft 365 audit type (Regular, System)          |
 |User     |Edm.String        |No         |UPN of the user          |
 
-## Model-driven apps in Dynamics 365 schema
-The model-driven apps in Dynamics 365 schema contains fields specific to model-driven apps in Dynamics 365 and partner teams. 
+## Customer engagement apps schema
+The customer engagement apps schema contains fields specific to customer engagement apps and partner teams. 
 
 |Field name  |Type  |Mandatory  |Description  |
 |---------|---------|---------|---------|
@@ -118,7 +79,7 @@ The model-driven apps in Dynamics 365 schema contains fields specific to model-d
 |EntityId     |Edm.Guid        |No         |Unique identifier of the entity          |
 |EntityName     |Edm.String         |No         |Name of the entity in the organization          |
 |Fields     |Edm.String          |No         |JSON of Key Value pair reflecting the values that were created or updated         |
-|Id     |Edm.String          |No         |Entity name in model-driven apps in Dynamics 365        |
+|Id     |Edm.String          |No         |Entity name in customer engagement apps        |
 |Query     |Edm.String         |No         |The Filter query parameters used while executing the FetchXML          |
 |QueryResults     |Edm.String         |No         |One or multiple unique records returned by the Retrieve and Retrieve Multiple SDK message call          |
 |ServiceContextId     |Edm.Guid         |No         |The unique id associated with service context          |
@@ -150,29 +111,19 @@ The model-driven apps in Dynamics 365 schema contains fields specific to model-d
 8. Choose **Save**.
 9. Choose **Publish** to publish the customization.
 10. Repeat steps 5 - 9 for other entities you want to audit.
-11. Turn on audit logging in Office 365. See [Turn Office 365 audit log search on or off](https://support.office.com/article/turn-office-365-audit-log-search-on-or-off-e893b19a-660c-41f2-9074-d3631c95a014).
+11. Turn on audit logging in Microsoft 365. See [Turn audit log search on or off](https://support.office.com/article/turn-office-365-audit-log-search-on-or-off-e893b19a-660c-41f2-9074-d3631c95a014).
 
 
-## Review your audit data using reports in Office 365 Security and Compliance Center
+## Review your audit data using reports in Microsoft 365 Security and Compliance Center
 
-You can review your audit data in the Office 365 Security and Compliance Center. See [Search the audit log for user and admin activity in Office 365](https://support.office.com/article/search-the-audit-log-for-user-and-admin-activity-in-office-365-57ca5138-0ae0-4d34-bd40-240441ef2fb6).
+You can review your audit data in the Microsoft 365 Security and Compliance Center. See [Search the audit log in the compliance Center](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide).
 
 To use the preconfigured reports, go to https://protection.office.com > **Search & investigation** > **Audit log search** and select the **Dynamics 365 activities** tab.
 
 ![Audit log reports](media/D365-audit-log-reports.png "Audit log reports")
 
-![Audit log search results](media/audit-log-search-results.png "Audit log search results")
-
-The following are the preconfigured reports:
-
-|  |  |   |
-|---------|---------|---------|
-|Accessed out-of-box entity     |Accessed custom entity |Accessed admin entity  |
-|Performed bulk actions (such as delete and import)  |Accessed other entity type   |Accessed Dynamics 365 admin center    |
-|Accessed internal management tool |Signed in or out  |Activated process or plug-in  |
-
 ## Create reports
-You can create your own reports to review your audit data. See [Search the audit log in the Office 365 Security & Compliance Center](https://support.office.com/article/search-the-audit-log-in-the-office-365-security-compliance-center-0d4d0f35-390b-4518-800e-0c7ec95e946c).
+You can create your own reports to review your audit data. See [Search the audit log in the Security & Compliance Center](https://support.office.com/article/search-the-audit-log-in-the-office-365-security-compliance-center-0d4d0f35-390b-4518-800e-0c7ec95e946c).
 
 ## What's logged
 
@@ -270,15 +221,16 @@ The following are some examples of logs created with Activity Logging.
 
 ## Additional considerations
 
-When audit log search in the Office 365 Security and Compliance Center is turned on, user and admin activity from your organization is recorded in the audit log and retained for 90 days. However, your organization might not want to record and retain audit log data. Or you might be using a third-party security information and event management (SIEM) application to access your auditing data. In those cases, a global admin can turn off audit log search in Office 365.
+When audit log search in the Microsoft 365 Security and Compliance Center is turned on, user and activity from your organization is recorded in the audit log and retained for 90 days. However, your organization might not want to record and retain audit log data. Or you might be using a third-party security information and event management (SIEM) application to access your auditing data. In those cases, a global admin can turn off audit log search in Microsoft 365.
 
 ## Known issues
 
-- Office has a 3KB limit for each audit record. Therefore, in some cases a single record from model-driven apps in Dynamics 365 needs to be split into multiple records in Office. The CorrelationId field can be used to retrieve the set of split records for a given source record. Operations that are likely to require splitting include RetrieveMultiple and ExportToExcel.
+- Office has a 3KB limit for each audit record. Therefore, in some cases a single record from customer engagement apps needs to be split into multiple records in Office. The CorrelationId field can be used to retrieve the set of split records for a given source record. Operations that are likely to require splitting include RetrieveMultiple and ExportToExcel.
 - Some operations need additional processing to retrieve all relevant data. For example, RetrieveMultiple and ExportToExcel are processed to extract the list of records that are retrieved or exported. However, not all relevant operations are yet processed. For example, ExportToWord is currently logged as single operation with no additional details about what was exported.
 - In future releases, logging will disabled for operations that are determined to not be useful based on a review of the logs. For example, some operations result from automated system activity, not user activity.
 
 ### See also
- [Audit data and user activity for security and compliance](audit-data-user-activity.md)<br />
- [Search the audit log for user and admin activity in Office 365](https://support.office.com/article/search-the-audit-log-for-user-and-admin-activity-in-office-365-57ca5138-0ae0-4d34-bd40-240441ef2fb6)
- [Office 365 Management APIs overview](https://msdn.microsoft.com/office-365/office-365-managment-apis-overview)
+[Audit data and user activity for security and compliance](audit-data-user-activity.md)<br />
+[Search the audit log in the compliance Center](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide) <br />
+Search the audit log for user activity using [Office 365 Management APIs overview](https://docs.microsoft.com/office/office-365-management-api/office-365-management-apis-overview)
+

@@ -6,36 +6,40 @@ manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 10/05/2019
+ms.date: 06/02/2020
 ms.author: jimholtz
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Enable the hybrid experience
 
-[!INCLUDE [cc-settings-moving](../includes/cc-settings-moving.md)] 
+<!-- legacy procedure -->
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Most of the core functionalities of sales and customer service have moved to the [Unified Interface](about-unified-interface.md) experience. Some of the features that are not yet on Unified Interface can now be accessed in the Unified Interface client. 
 
 The following features are not yet present in the Unified Interface but can be enabled for display as legacy dialogs in the Unified Interface through the hybrid experience.
 
-- [Advanced Find](https://docs.microsoft.com/powerapps/user/create-edit-or-save-advanced-find-search) 
+- [Advanced Find](https://docs.microsoft.com/powerapps/user/advanced-find) 
 - Bulk edit
 - [Merge records](https://docs.microsoft.com/powerapps/user/merge-duplicate-records)
 - [Record sharing](https://docs.microsoft.com/powerapps/user/assign-or-share-records)
 - [Audit History](https://docs.microsoft.com/powerapps/developer/common-data-service/auditing-overview)
 - All options under **Set Personal Options** (![Settings gear](media/settings-gear-icon.png "Settings gear"))
+- Reports
 
  > [!NOTE]
    > The hybrid experience is not available for on-premises versions or on mobile.  
 
 These features are enabled through a setting in System Settings.
 
-1. Go to **Settings** > **Administration** > **System Settings**.  
+1. In the web app, go to **Settings** > **Administration** > **System Settings**.  
 2. Select the **General** tab.  
 3. Set **Enable embedding of certain legacy dialogs in Unified Interface browser client** to **Yes**.
 

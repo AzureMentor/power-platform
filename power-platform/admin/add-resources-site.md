@@ -10,14 +10,15 @@ ms.date: 09/30/2017
 ms.author: jimholtz
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Add resources to a site
 
-[!INCLUDE [cc-settings-moving](../includes/cc-settings-moving.md)] 
+<!-- legacy procedure -->
 
 After you create a site, you can add resources such as users, equipment, or facilities to it.  
   

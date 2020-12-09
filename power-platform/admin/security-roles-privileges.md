@@ -1,21 +1,25 @@
 ---
 title: "Security roles and privileges | MicrosoftDocs"
 description: Overview of security roles and privileges
-author: jimholtz
-manager: kvivek
+author: paulliew
+ms.author: paulliew
+ms.reviewer: jimholtz
+ms.custom: "admin-security"
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 10/07/2019
-ms.author: jimholtz
+ms.date: 09/09/2020
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Security roles and privileges
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 To control data access, you must set up an organizational structure that both protects sensitive data and enables collaboration. You do this by setting up business units, security roles, and field security profiles.  
 
@@ -35,7 +39,7 @@ Each security role consists of record-level privileges and task-based privileges
   
 The colored circles on the security role settings page define the access level for that privilege. Access levels determine how deep or high in the organizational business unit hierarchy the user can perform the specified privilege. The following table lists the levels of access in the app, starting with the level that gives users the most access.  
   
-|||  
+|Icon |Description |  
 |-|-|  
 |![Access level global](../admin/media/access-level-global.png "Access level global")|**Global**. This access level gives a user access to all records in the organization, regardless of the business unit hierarchical level that the environment or the user belongs to. Users who have Global access automatically have Deep, Local, and Basic access, also.<br /><br /> Because this access level gives access to information throughout the organization, it should be restricted to match the organization's data security plan. This level of access is usually reserved for managers with authority over the organization.<br /><br /> The application refers to this access level as **Organization**.|  
 |![Access level deep](../admin/media/access-deep.png "Access level deep")|**Deep**. This access level gives a user access to records in the user's business unit and all business units subordinate to the user's business unit.<br /><br /> Users who have Deep access automatically have Local and Basic access, also.<br /><br /> Because this access level gives access to information throughout the business unit and subordinate business units, it should be restricted to match the organization's data security plan. This level of access is usually reserved for managers with authority over the business units.<br /><br /> The application refers to this access level as **Parent: Child Business Units**.|  
@@ -44,10 +48,10 @@ The colored circles on the security role settings page define the access level f
 |![Access level none](../admin/media/access-level-none.png "Access level none")|**None**. No access is allowed.|  
   
 > [!IMPORTANT]
-> To ensure that users can view and access all areas of the web application, such as entity forms, the nav bar, or the command bar, all security roles in the organization must include the Read privilege on the `Web Resource` entity. For example, without read permissions, a user won’t be able to open a form that contains a web resource and will see an error message similar to this: “Missing `prvReadWebResource` privilege.” [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Create or edit a security role](create-edit-security-role.md)  
+> To ensure that users can view and access all areas of the web application, such as entity forms, the nav bar, or the command bar, all security roles in the organization must include the Read privilege on the `Web Resource` entity. For example, without read permissions, a user won't be able to open a form that contains a web resource and will see an error message similar to this: "Missing `prvReadWebResource` privilege." [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Create or edit a security role](create-edit-security-role.md)  
 
 ### Record-level privileges  
- [!INCLUDE [pn-powerapps](../includes/pn-powerapps.md)] and model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service, use eight different record-level privileges that determine the level of access a user has to a specific record or record type.  
+ [!INCLUDE [pn-powerapps](../includes/pn-powerapps.md)] and customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), use eight different record-level privileges that determine the level of access a user has to a specific record or record type.  
   
 |Privilege|Description|  
 |---------------|-----------------|  
@@ -65,34 +69,37 @@ The colored circles on the security role settings page define the access level f
   
  Teams are used primarily for sharing records that team members ordinarily couldn't access. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Manage security, users and teams](manage-teams.md).  
   
- It’s not possible to remove access for a particular record. Any change to a security role privilege applies to all records of that record type.  
+ It's not possible to remove access for a particular record. Any change to a security role privilege applies to all records of that record type.  
 
-## Team member’s privilege inheritance
+## Team member's privilege inheritance
 
 ### User and Team privileges
 
-- **User privileges**: User is granted these privileges directly when a security role is assigned to the user.  User can create and has access to records created/owned by the user when Basic access level for Create and Read were given.
+- **User privileges**: User is granted these privileges directly when a security role is assigned to the user.  User can create and has access to records created/owned by the user when Basic access level for Create and Read were given. This is the default setting for new security roles.
 - **Team privileges**: User is granted these privileges as member of the team.  For team members who do not have user privileges of their own, they can only create records with the team as the owner and they have access to records owned by the Team when Basic access level for Create and Read were given.
 
 A security role can be set to provide a team member with direct Basic-level access user privileges. A team member can create records that they own and records that have the team as owner when the Basic access level for Create is given. When the Basic access level for Read is given, team member can access records that are owned by both that team member and by the team.  
 
-This member’s privilege inheritance role is applicable to [Owner](manage-teams.md#about-owner-teams) and Azure Active Directory (Azure AD) [Group teams](manage-teams.md#about-group-teams). 
+This member's privilege inheritance role is applicable to [Owner](manage-teams.md#about-owner-teams) and Azure Active Directory (Azure AD) [group team](manage-group-teams.md). 
 
-### Create a security role with team member’s privilege inheritance
+> [!NOTE]
+> Prior to Team member's privilege inheritance release in May 2019, security roles behaved as **Team privileges**. Security roles created before this release are set as **Team privileges** and security roles created after this release are by default set as **User privileges**.
+
+### Create a security role with team member's privilege inheritance
 
 #### Prerequisites
-These settings can be found in the Power Platform Admin center by going to **Environments** > [select an environment] > **Settings** > **User's + permissions** > **Security roles**.
+These settings can be found in the Power Platform admin center by going to **Environments** > [select an environment] > **Settings** > **User's + permissions** > **Security roles**.
 
 Make sure you have the System Administrator or System Customizer security role or equivalent permissions.
 
 Check your security role:
 - Follow the steps in [View your user profile](https://docs.microsoft.com/powerapps/user/view-your-user-profile).
-- Don’t have the correct permissions? Contact your system administrator.<br />
+- Don't have the correct permissions? Contact your system administrator.<br />
 
 1. Select an environment and go to **Settings** > **User's + permissions** > **Security roles**.
 2. On the command bar, select **New**.
 3. Enter a role name.
-4. Select the **Member’s privilege inheritance** drop-down list.
+4. Select the **Member's privilege inheritance** drop-down list.
 5. Select **Direct User/Basic access level and Team privileges**.
 6. Go to each tab and set the appropriate privileges on each entity.
 
@@ -100,4 +107,11 @@ Check your security role:
 
 > [!NOTE]
 > You can also set this privilege inheritance property for all out-of-the-box security roles except the System Administrator role.  When a privilege inheritance security role is assigned to a user, the user gets all the privileges directly, just like a security role without privilege inheritance.
+>
+> You can only select Basic level privileges in the member's privilege inheritance. If you need to provide access to a child business unit, you will need to elevate the privilege to Deep; for example, you need to assign a security role to the Group team and you want the members of this group to be able to Append to Account.  You setup the security role with a Basic level member's privilege inheritance and in the Append to Account privilege, you set it to Deep.  This is because Basic privileges are only applicable to the user's business unit.
+
+## Assigning security roles
+In order to assign security roles to a user, you need to have the appropriate privileges (minimum privileges are 'Read' and 'Assign' on the Security Role entity). To prevent elevation of security role privileges, the person who is assigning the security role cannot assign someone else with a security role that has more privileges than the assignee, for example a CSR Manager cannot assign a System Administrator role to another user. 
+
+By default, the System Administrator security role has all the required privileges to assign security roles to any user including assigning the System Administrator security role. If you have a need to allow non-System Administrators to assign security roles, you should consider creating a custom security role. See [Create an administrative user and prevent elevation of security role privilege](prevent-elevation-security-role-privilege.md). 
 

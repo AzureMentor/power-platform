@@ -1,25 +1,25 @@
 ---
 title: "Manage email tracking settings  | MicrosoftDocs"
-description: View and manage email tracking settings for Common Data Service.
+description: View and manage email tracking settings for Microsoft Dataverse.
 author: jimholtz
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 08/10/2018
+ms.date: 07/31/2020
 ms.author: jimholtz 
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Manage email tracking settings
 
 Use Email settings to adjust how model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service, features appear and function.
 
-These settings can be found in the Power Platform Admin center by going to **Environments** > [select an environment] > **Settings** > **Email** > **Email Tracking**.
+These settings can be found in the Power Platform admin center by going to **Environments** > [select an environment] > **Settings** > **Email** > **Email Tracking**.
 
 Make sure you have the System Administrator or System Customizer security role or equivalent permissions to update the business closures.
 
@@ -46,4 +46,4 @@ Make sure you have the System Administrator or System Customizer security role o
 > |People can use categories to track emails and appointments|Default: Off. Content coming.|
 > |Allow auto-tracking on outgoing email|Default: Off. Content coming.|
 > |**Tracking between people**| |
-> |Track emails sent between people as two activities|Default: Off. Select this option to create two email activities between [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] users, one for the sender and one for the recipient.| 
+> |Track emails sent between Dynamics 365 users as two activities|Default: On. Select this option to create two email activities between [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] users, one for the sender and one for the recipient.| 

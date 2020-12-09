@@ -6,42 +6,38 @@ manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 07/05/2018
+ms.date: 11/21/2020
 ms.author: jimholtz
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Supported web browsers and mobile devices
 
 Users can access the model-driven apps with the most recent versions of these popular browsers:  
   
-- [!INCLUDE[pn_Internet_Explorer](../includes/pn-internet-explorer.md)]   
-  
-- [!INCLUDE[pn_microsoft_edge](../includes/pn-microsoft-edge.md)]  
-  
-- [!INCLUDE[tn_Firefox](../includes/tn-firefox.md)]   
+- Microsoft Edge (recommended: [Chromium-based Edge](https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium))
+- Chrome
+- Firefox  
+- Safari
+- Internet Explorer (not recommended)
 
-- [!INCLUDE[tn_chrome](../includes/tn-chrome.md)]
-  
-- [!INCLUDE[tn_Safari](../includes/tn-safari.md)]   
-    
+> [!TIP]
+> For optimal performance and experience, we recommend you use the latest version of a modern browser. 
   
 For more detailed information about supported browsers, see [Web application requirements](web-application-requirements.md).  
   
-For a mobile device, such as an iPad or smartphone, the following apps are available:  
-  
-- [!INCLUDE[pn_crm_for_ipad](../includes/pn-crm-for-ipad.md)]  
-  
-- [!INCLUDE[pn_crm_for_windows_8](../includes/pn-crm-for-windows-8.md)]  
-  
-For more detailed information about supported phones and tablets, see [Dynamics 365 mobile and tablet device support](/dynamics365/mobile-app/support-phones-tablets).  
+For a mobile device, such as an iPad or smartphone, the following apps are available for model-driven apps and Dynamics 365 apps (such as Dynamics 365 Sales and Dynamics 365 Marketing):
+
+- [Power Apps mobile](/powerapps/user/run-canvas-and-model-apps-on-mobile) app  
+- [Dynamics 365 for phones and Dynamics 365 for tablets](https://docs.microsoft.com/dynamics365/mobile-app/install-dynamics-365-for-phones-and-tablets)
   
 > [!NOTE]
-> - Users who try to view model-driven apps on an unsupported browser users are redirected to the Unified Interface experience. For more information, see [Unified Interface Overview](about-unified-interface.md).  
+> - Users who try to view model-driven apps on an unsupported browser are redirected to the Unified Interface experience. For more information, see [Unified Interface Overview](about-unified-interface.md).  
 > -  If you have added content to forms or dashboards in an iFrame, you might have implemented security restrictions around certain actions in that content, such as external links. Keep in mind that in [!INCLUDE[tn_Firefox](../includes/tn-firefox.md)], this security restriction code will likely be unsupported.  
   
 <a name="BKMK_browserIssues"></a>   

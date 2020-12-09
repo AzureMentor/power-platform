@@ -1,22 +1,25 @@
 ---
-title: Integrate data into Common Data Service
-description: Integrate data from multiple sources into Common Data Service
+title: Integrate data into Microsoft Dataverse
+description: Integrate data from multiple sources into Microsoft Dataverse
 author: sabinn-msft
 ms.service: power-platform
 ms.topic: how-to
 ms.component: cds
-ms.date: 05/15/2019
+ms.date: 09/04/2020
 ms.author: sabinn
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
-# Integrate data into Common Data Service
+# Integrate data into Microsoft Dataverse
 
-The Data Integrator (for Admins) is a point-to-point integration service used to integrate data into Common Data Service. It supports integrating data from multiple sources—for example, Dynamics 365 Finance and Operations, Dynamics 365 Sales and SalesForce (Preview), SQL (Preview)—into Common Data Service. It also supports integrating data into Dynamics 365 Finance and Operations and Dynamics 365 Sales. This service has been generally available since July 2017.  
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
+The Data Integrator (for Admins) is a point-to-point integration service used to integrate data into Dataverse. It supports integrating data from multiple sources—for example, Dynamics 365 Finance and Operations, Dynamics 365 Sales and SalesForce (Preview), SQL (Preview)—into Dataverse. It also supports integrating data into Dynamics 365 Finance and Operations and Dynamics 365 Sales. This service has been generally available since July 2017.  
 
 We started with first-party apps—for example, Dynamics 365 Finance and Operations and Dynamics 365 Sales. With the help of Power Query or M-based connectors, we are now able to support additional sources like SalesForce (Preview) and SQL (Preview) and will extend this to 20+ sources in the near future. 
 
@@ -69,7 +72,7 @@ Before you can create a data integration project, you must provision a connectio
 
 **To create a connection**
 
-1. Go to [Power Apps](https://web.powerapps.com).
+1. Go to [Power Apps](https://make.powerapps.com).
 
 2. Under Data, select **Connections** and then select **New connection**.
 
@@ -189,11 +192,11 @@ Execution history shows the history of all project executions with project name,
     > [!div class="mx-imgBorder"] 
     > ![Execution history failure](media/data-integrator/ExecutionHistoryFailures3780.png "Execution history failure")
 
--   If the project execution is in ‘ERROR’ state, then it will retry execution at the next scheduled run.
+-   If the project execution is in 'ERROR' state, then it will retry execution at the next scheduled run.
 
--   If the project execution is in ‘WARNING’ state, then you will need to fix the issues on the source. It will retry execution at the next scheduled run.
+-   If the project execution is in 'WARNING' state, then you will need to fix the issues on the source. It will retry execution at the next scheduled run.
 
-    In either case, you could also choose to manually ‘re-run execution.’
+    In either case, you could also choose to manually 're-run execution.'
 
 > [!NOTE]
 > Anytime you execute a project, manually or schedule based, it generates a detailed log which shows project name, last updated timestamp along with status. You can view this under the execution history for each project. Project execution history is maintained for 45 days after which it is automatically purged.
@@ -222,7 +225,7 @@ After you create an integration project, you get the option to run it manually o
 3. Select **Recur every** and once you have completed all the fields, select **Save schedule**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Schedule-based writes](media/data-integrator/Schedulebasedwrites1780.png "Schedule-based writes")
+    > ![Save schedule](media/data-integrator/Schedulebasedwrites1780.png "Save schedule")
 
 You can set a frequency as often as 1 minute or have it recur a certain number of hours, days, weeks, or months. Note that the next refresh won't start until the previous project task completes its run.
 
@@ -296,29 +299,29 @@ You can customize projects and templates in these ways:
 7. The dropdown list shows you all your source and destination entities.
 
     > [!div class="mx-imgBorder"] 
-    > ![Customize template add task](media/data-integrator/CustomizeTemplateAddtask175.png "Customize template add task")
+    > ![Customize template add task2](media/data-integrator/CustomizeTemplateAddtask175.png "Customize template add task2")
 
-    In this case, a new task was created to sync User entity from SalesForce to Users entity in Common Data Service.
+    In this case, a new task was created to sync User entity from SalesForce to Users entity in Dataverse.
 
     > [!div class="mx-imgBorder"] 
-    > ![Customize template add task](media/data-integrator/CustomizeTemplateAddtask275.png "Customize template add task")
+    > ![Customize template add task3](media/data-integrator/CustomizeTemplateAddtask275.png "Customize template add task3")
 
 8. Once you create the task, you will see your new task listed and you can delete the original task.
 
     > [!div class="mx-imgBorder"] 
-    > ![Customize template add task](media/data-integrator/CustomizeTemplateAddtask3780.png "Customize template add task")
+    > ![Customize template add task4](media/data-integrator/CustomizeTemplateAddtask3780.png "Customize template add task4")
 
-9. You just created a new template—in this case, a template to pull User entity data from SalesForce to Common Data Service. Select **Save** to save your customization.
+9. You just created a new template—in this case, a template to pull User entity data from SalesForce to Dataverse. Select **Save** to save your customization.
 
 10. Follow the steps to customize field mappings for this new template. You could run this project and/or save the project as a template from the **Project list** page.
 
     > [!div class="mx-imgBorder"] 
-    > ![Customize template save as template](media/data-integrator/CustomizeTemplateSaveAsTemplate780.png "Customize template save as template")
+    > ![Project list](media/data-integrator/CustomizeTemplateSaveAsTemplate780.png "Project list")
 
 11. Provide a name and description and/or share with others in your organization.
 
     > [!div class="mx-imgBorder"] 
-    > ![Customize template save as template](media/data-integrator/CustomizeTemplateSaveAsTemplate175.png "Customize template save as template")
+    > ![Name and description](media/data-integrator/CustomizeTemplateSaveAsTemplate175.png "Name and description")
 
 **To create your own template from blank templates**
 
@@ -329,40 +332,40 @@ You can customize projects and templates in these ways:
    For this example, choose the **Sales to Fin and Ops** template since we want to move data from Dynamics 365 Finance and Operations to Dynamics 365 Sales.
     
     > [!div class="mx-imgBorder"] 
-    > ![](media/create-data-integration-project.png "Create data integration project")
+    > ![Create data integration project](media/create-data-integration-project.png "Create data integration project")
 
 4. Follow the steps 6 through 9 <a href="#CreateProject">here</a> to finish creating a data integration project. Select **Save**.
 
-5. You’ll see the Tasks page which is empty since it’s a blank template, without any tasks. Select **Add task** to pick an entity from the drop-down list and add a new task.
+5. You'll see the Tasks page which is empty since it's a blank template, without any tasks. Select **Add task** to pick an entity from the drop-down list and add a new task.
    In this case, for demo purposes, we will create an **Activities Sales to Fin and Ops** task by picking **Activities** entity for Dynamics 365 Finance and Operations and Dynamics 365 Sales. Select **Create**.
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/activities-sales-fin-opps-task.png "ActivitiesSales to Fin and Ops task")
+    > ![ActivitiesSales to Fin and Ops task](media/activities-sales-fin-opps-task.png "ActivitiesSales to Fin and Ops task")
 
 6. You'll see a new task has been added **Activities Sales to Fin and Ops**. Select **Save** to save your changes.
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/new-task-added.png "New task added")
+    > ![New task added](media/new-task-added.png "New task added")
 
 7. The project is created. Select **Save as template** from the **Projects** list page.
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/save-as-template.png "Save as template")
+    > ![Save as template](media/save-as-template.png "Save as template")
 
 8. Provide and name and description, then select **Save**. Additionally, select **Share with everyone in my organization** to share this template.
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/save-describe-share.png "Save project as template")
+    > ![Save project as template](media/save-describe-share.png "Save project as template")
 
 You'll see the newly created template listed on the **Templates** list page.
 
 > [!div class="mx-imgBorder"] 
-> ![](media/newly-created-template.png "Newly created template")
+> ![Newly created template](media/newly-created-template.png "Newly created template")
 
 Additionally, after creating a new integration project, when you choose **Select a template** you'll see your newly created template as part of the **Select a template** list.
 
 > [!div class="mx-imgBorder"] 
-> ![](media/new-data-integration-project.png "New data integration project")
+> ![New data integration project](media/new-data-integration-project.png "New data integration project")
 
 
 ## Advanced data transformation and filtering 
@@ -393,7 +396,7 @@ With Power Query support, we now provide advanced filtering and data transformat
 5. Select **to link** to launch the Advanced Query and Filtering user interface, which gives you source field data in Microsoft Excel-type columns.
 
     > [!div class="mx-imgBorder"] 
-    > ![Advanced Query and Filtering](media/data-integrator/EnablePQ4780.png "Advanced Query and Filtering")
+    > ![Select to link](media/data-integrator/EnablePQ4780.png "Select to link")
 
 6. From the top menu, you get several options for transforming data such as **Add conditional column**, **Duplicate column**, and **Extract**.
 
@@ -439,11 +442,21 @@ With Power Query support, we now provide advanced filtering and data transformat
 
 For more information on Power Query, see [Power Query documentation](https://docs.microsoft.com/power-query/).
 
+> [!NOTE]
+> - Once **Advanced Query and Filtering** is enabled, transforms via **Fn** are not supported, and instead should be defined using Advanced Query and Filtering. 
+> - Currently, we do not support doing joins across multiple data sources (either via the **Get data** button or M query) in Advanced Query and Filtering.
+> - If you encounter Power Query evaluation limits with the error: 
+> 
+>   <i>The powerquery job failed with error: Exception ExceptionType:MashupEvaluationException, ExceptionMessage:EvaluationQuotaReached, EvaluationResponse:{"ResultType":"ErrorCode","Code":"EvaluationQuotaReached"</i> 
+>
+>   Review the guidance on [Power Query Online Limits](https://docs.microsoft.com/power-query/power-query-online-limits).
+> - Modifying the _url_ directly in the mashup editor is not supported. Only the filter applied using the mashup editor UI or specified in source filter edit field on mapping page will be used.
+
 ## Performance tuning
 
 There are several factors that impact the performance of an integration scenario. Performance is highly dependent on: 
 
-- Which applications you are integrating: Dynamics 365 Finance and Operations and Common Data Service
+- Which applications you are integrating: Dynamics 365 Finance and Operations and Dataverse
 
 - Which entities are used: the entities' shape, validation, and business logic (standard and customizations)
 
@@ -451,7 +464,7 @@ The Data Integrator takes the data from the source application and pushes it int
 
 Dynamics 365 Finance and Operations uses the data management framework which provides a way to pull/push data in the most performant fashion. The data management framework is used to manage data entities and data entity packages in Microsoft Dynamics 365 Finance and Operations. 
 
-Dynamics 365 for Common Data Service uses OData APIs along with parallelism to maximize the performance. 
+Dynamics 365 for Dataverse uses OData APIs along with parallelism to maximize the performance. 
 
 You can use the following settings to tune the performance of Dynamics 365 Finance and Operations based on load, entity, and resources.
 
@@ -473,8 +486,8 @@ You can use the following settings to tune the performance of Dynamics 365 Finan
 - Turning off validations (optional): 
   While the Data Integrator does not bypass any business logic and validations, you may optionally turn off the ones that are not required to improve performance.
 
-Consider the following tips to ensure performance while importing or exporting data from Common Data Service environments.
+Consider the following tips to ensure performance while importing or exporting data from Dataverse environments.
 
-### Importing/Exporting data to/from model-driven apps in Dynamics 365
+### Importing/Exporting data to/from customer engagement apps
 
 - Ensure indexes are defined for integration keys.

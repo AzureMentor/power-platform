@@ -2,22 +2,24 @@
 title: "Analyze your data with Excel templates  | MicrosoftDocs"
 description: Analyze your data with Excel templates
 author: jimholtz
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 04/22/2019
+ms.date: 09/04/2020
 ms.author: jimholtz
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Analyze and share your data with Excel templates 
 
-[!INCLUDE [cc-settings-moving](../includes/cc-settings-moving.md)] 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
+<!-- legacy procedure -->
   
  [!INCLUDE[pn_microsoft_excel](../includes/pn-microsoft-excel.md)] provides powerful ways to analyze and present your data. With [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] templates, you can easily create and share your customized analysis with others in your organization.  
   
@@ -33,7 +35,7 @@ search.app:
   
 - And much more…  
   
-  You can try out the [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] templates included with model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service, to get a quick view of what kind of analysis is possible.  
+  You can try out the [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] templates included with customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), to get a quick view of what kind of analysis is possible.  
   
   ![Example of a pipeline analysis Excel template](../admin/media/excel-template-example-pipeline-analysis.png "Example of a pipeline analysis Excel template")  
   
@@ -64,7 +66,7 @@ search.app:
   
 1. Click **Excel Template**.  
   
-2. Select an entity (record type) to include that entity’s data. The views you can select in the next field depend on the entity you select.  
+2. Select an entity (record type) to include that entity's data. The views you can select in the next field depend on the entity you select.  
   
 3. Select a view.  
   
@@ -86,17 +88,17 @@ search.app:
   
  ![New Excel Template](../admin/media/excel-template-new.png "New Excel Template")  
   
- Let’s walk through a simple example of customizing an [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] template using  sample data.  
+ Let's walk through a simple example of customizing an [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] template using  sample data.  
   
 #### Example customization of Opportunities data  
   
 1. Click **Enable Editing** to allow customization of the [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] spreadsheet.  
   
-2. Add a new column and name it “Expected Revenue”.  
+2. Add a new column and name it "Expected Revenue".  
   
    ![Customize the Excel template](../admin/media/excel-template-customize.png "Customize the Excel template")  
   
-3. Create a formula for expected revenue. Don’t refer to cells using their addresses; define and use names instead.  
+3. Create a formula for expected revenue. Don't refer to cells using their addresses; define and use names instead.  
   
    ![Create a formula in the Excel template](../admin/media/excel-template-create-formula.png "Create a formula in the Excel template")  
   
@@ -108,7 +110,7 @@ search.app:
   
 5. Save the spreadsheet.  
   
-   You’re now ready to upload the [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] template.  
+   You're now ready to upload the [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] template.  
   
 <a name="BKMK_CreateUpload"></a>   
 ### Step 3: Upload the template and share with others  
@@ -154,7 +156,7 @@ search.app:
   
  ![Excel template uploaded from Settings page](../admin/media/excel-template-uploaded-from-settings-page.png "Excel template uploaded from Settings page")  
   
- Templates uploaded from the Settings page are available to all users. You don’t need to take any further action.  
+ Templates uploaded from the Settings page are available to all users. You don't need to take any further action.  
   
  **If you uploaded the template from a list of records**  
   
@@ -190,27 +192,27 @@ search.app:
   
  This template was created from the Settings page so it will appear on the menu under **Excel Templates**. If it had been created from a records list, it would appear under **Personal Excel Templates**.  
   
- If you have [!INCLUDE[pn_microsoft_excel_online](../includes/pn-microsoft-excel-online.md)], you can see the data in place in an [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] window in model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service. If not, or if you’d rather create the [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] file, click **Download \<template name>**.  
+ If you have [!INCLUDE[pn_microsoft_excel_online](../includes/pn-microsoft-excel-online.md)], you can see the data in place in an [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] window in customer engagement apps (such as Dynamics 365 Sales and Customer Service). If not, or if you'd rather create the [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] file, click **Download \<template name>**.  
   
 <a name="BKMK_UseAnalyze"></a>   
 ### Step 3: Analyze your data in Excel  
  What you see in the [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] spreadsheet is based on two things:  
   
-- **Records**. The view you choose to export from determines what records you see in the exported [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] file. For example, if you selected Closed Opportunities, you’ll see those records even if you used the template created with My Open Opportunities.  
+- **Records**. The view you choose to export from determines what records you see in the exported [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] file. For example, if you selected Closed Opportunities, you'll see those records even if you used the template created with My Open Opportunities.  
   
-- **Columns**. The template you used determines what columns appear in the table in the exported [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] file. For example, the Closed Opportunities view has these columns: Potential Customer, Status, Actual Revenue, and Actual Close Date. But if the template you used was based on My Open Opportunities, you’d see columns associated with that view and any column filtering done when you created the template.  
+- **Columns**. The template you used determines what columns appear in the table in the exported [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] file. For example, the Closed Opportunities view has these columns: Potential Customer, Status, Actual Revenue, and Actual Close Date. But if the template you used was based on My Open Opportunities, you'd see columns associated with that view and any column filtering done when you created the template.  
   
 <a name="BKMK_UseShare"></a>   
 ### Step 4: Share the results with others  
- If you’re using [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)], save a copy either online or to your computer. Send the file to others for their review and input.  
+ If you're using [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)], save a copy either online or to your computer. Send the file to others for their review and input.  
   
 <a name="BKMK_SampleTemplates"></a>   
 ## Try out the sample Excel templates  
- There are four [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] templates included with model-driven apps in Dynamics 365.  
+ There are four [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] templates included with customer engagement apps.  
   
  ![Try out the included Excel templates](../admin/media/excel-template-included.png "Try out the included Excel templates")  
   
- The sample [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] templates were created with a specific record type (entity). You’ll only be able to apply the template to records of the same record type.  
+ The sample [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] templates were created with a specific record type (entity). You'll only be able to apply the template to records of the same record type.  
   
 |Name|Entity|  
 |----------|------------|  
@@ -228,14 +230,14 @@ search.app:
 3. Download the template or open it in place in [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)].  
   
 > [!TIP]
->  You can export the templates that are included in model-driven apps in Dynamics 365, modify them, and then reimport them as new templates. This can give you a running start on creating your own custom [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] templates.  
+>  You can export the templates that are included in customer engagement apps, modify them, and then reimport them as new templates. This can give you a running start on creating your own custom [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] templates.  
   
 <a name="BKMK_BestPractices"></a>   
 ## Best practices and considerations for using Excel templates  
  Here are some things you need to be aware of to create and make best use of [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] templates.  
   
 ### Test your Excel templates  
- [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] has lots of features. It’s a good idea to test your customizations to see that all [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] features work as expected in your templates.  
+ [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] has lots of features. It's a good idea to test your customizations to see that all [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] features work as expected in your templates.  
   
 ### Privacy and pivot charts  
  By default pivot chart data is not updated when a spreadsheet is opened. This can create a security issue if certain pivot chart data should not be seen by users with insufficient permissions.  
@@ -263,15 +265,15 @@ search.app:
  If you want to add content to the [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] template, place your data above or to the right of the existing data. A second option is to place your new content on a second sheet.  
   
 ### Excel templates with images may cause an error  
- If you try to analyze data with an [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] template that has an image saved in it, you may see the following error: “An error occurred while attempting to save your workbook. As a result, the workbook was not saved.” Try removing the image from the template and reloading it.  
+ If you try to analyze data with an [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] template that has an image saved in it, you may see the following error: "An error occurred while attempting to save your workbook. As a result, the workbook was not saved." Try removing the image from the template and reloading it.  
   
 ### Excel templates and Office Mobile app in Windows 8.1  
- [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] templates will not open in [!INCLUDE[pn_windows_8_1](../includes/pn-windows-8-1.md)] devices with Office Mobile app. You’ll get the following error message: “We’ve recovered as much of your document as we could, but you can’t edit it. Try to open and repair the document on your PC to fix the problem.”  
+ [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] templates will not open in [!INCLUDE[pn_windows_8_1](../includes/pn-windows-8-1.md)] devices with Office Mobile app. You'll get the following error message: "We've recovered as much of your document as we could, but you can't edit it. Try to open and repair the document on your PC to fix the problem."  
   
  This is a known issue.  
   
 ### Use table column names and range names in formulas  
- When you create [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] formulas, don’t use column titles or cell numbers. Instead, use the table column names, and define names for cells or cell ranges.  
+ When you create [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] formulas, don't use column titles or cell numbers. Instead, use the table column names, and define names for cells or cell ranges.  
   
 <a name="BKMK_SecurityRole"></a>   
 ## Use security roles to control access to templates  

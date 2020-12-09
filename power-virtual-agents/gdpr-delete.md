@@ -1,18 +1,19 @@
 ---
 title: "Responding to GDPR Data Subject Delete Requests"
 description: "Respond to GDPR Data Subject Delete Requests for Power Virtual Agents."
-ms.date: 12/12/2019
-ms.service:
-  - "dynamics-365-ai"
+keywords: "PVA, GDPR, delete data"
+ms.date: 9/22/2020
+ms.service: power-virtual-agents
 ms.topic: article
 author: iaanw
 ms.author: iawilt
+ms.custom: ceX, gdpr
 manager: shellyha
+ms.collection: virtual-agent
 ---
 
 # Responding to requests to delete data from Power Virtual Agents
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
 Power Virtual Agents offers the following experiences to delete personal data for a specific user:
 
@@ -22,11 +23,16 @@ Power Virtual Agents offers the following experiences to delete personal data fo
 * [Metrics](#delete-power-virtual-agents-metrics)
 * [System telemetry](#delete-power-virtual-agents-system-telemetry)
 
-### Delete Power Virtual Agents bot chat logs
+## Prerequisites
+
+- [!INCLUDE [Medical and emergency usage](includes/pva-usage-limitations.md)]
+
+
+## Delete Power Virtual Agents bot chat logs
 
 All bot chat logs are deleted when the bot is deleted. See [steps to delete bot](#delete-power-virtual-agents-bot-including-all-content) for more information.
 
-### Delete Power Virtual Agents bot including all content
+## Delete Power Virtual Agents bot including all content
 
 Follow these steps to delete a bot:
 
@@ -39,17 +45,15 @@ Follow these steps to delete a bot:
 
 All bot content is immediately deleted.
 
-If your license has expired, you can delete your bot(s) by selecting **Permanently delete your bots**.
-
-### Delete Power Virtual Agents telemetry
+## Delete Power Virtual Agents telemetry
 
 All Power Virtual Agents telemetry data is automatically deleted within 29 days. No action from the user is needed.
 
-### Delete Power Virtual Agents metrics
+## Delete Power Virtual Agents metrics
 
 To delete metrics data, you must delete your bot. See [steps to delete your bot](#delete-power-virtual-agents-bot-including-all-content) for more information.
 
-### Delete Power Virtual Agents system telemetry
+## Delete Power Virtual Agents system telemetry
 
 All bot system telemetry is automatically deleted within 29 days. No action from the user is needed.
 

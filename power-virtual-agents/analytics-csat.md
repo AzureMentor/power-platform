@@ -1,18 +1,24 @@
 ---
-title: "Review customer satisfaction for your Power Virtual Agents bots"
+title: "Review customer satisfaction for your chatbots"
 description: "Use AI-driven analytics to understand how well customers are interacting with your bot, and to identify areas for improvement."
-ms.date: 11/12/2019
-ms.service:
-  - "dynamics-365-ai"
+keywords: "PVA"
+ms.date: 9/22/2020
+ms.service: power-virtual-agents
 ms.topic: article
 author: iaanw
 ms.author: iawilt
 manager: shellyha
-ms.cusom: analysis
+ms.cusom: analysis, ceX
 ms.collection: virtual-agent
 ---
 
 # Analyze customer satisfaction for Power Virtual Agents bots
+
+Select the version of Power Virtual Agents you're using here:
+
+> [!div class="op_single_selector"]
+> - [Power Virtual Agents web app](analytics-csat.md)
+> - [Power Virtual Agents app in Microsoft Teams](teams/analytics-csat-teams.md)
 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
@@ -32,6 +38,11 @@ The Customer Satisfaction page includes a variety of charts with graphical views
 The Customer satisfaction drivers chart shows you the topics that are having the most impact on customer satisfaction.
 
 By default, the page shows you key performance indicators for the last seven days. To change the time period to the last 30 days, select **Last 30 days** from the drop-down list at the top of the page.
+
+## Prerequisites
+
+- [!INCLUDE [Medical and emergency usage](includes/pva-usage-limitations.md)]
+
 
 ## Customer satisfaction drivers chart
 

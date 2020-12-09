@@ -2,22 +2,24 @@
 title: "Performance tuning and optimization  | MicrosoftDocs"
 description: Performance tuning and optimization
 author: Mattp123
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 02/01/2019
+ms.date: 09/08/2020
 ms.author: matp
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Performance tuning and optimization
 
-Use this information to help you plan and optimize application performance with model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service.  
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
+Use this information to help you plan and optimize application performance with customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation).  
 
 We recommend that you not run operations that require intensive database transactions concurrently. Similarly, don’t run operations that require intensive database transactions during normal business hours when users are most likely to access the system. 
 

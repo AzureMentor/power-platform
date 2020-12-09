@@ -1,21 +1,24 @@
 ---
 title: "Notifications for Business Application Group services  | MicrosoftDocs"
 description: CNotifications for Business Application Group services
-author: jimholtz
-manager: kvivek
+author: astockli
+manager: timrob
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 07/09/2019
-ms.author: jimholtz
+ms.date: 09/08/2020
+ms.author: astockli
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Notifications for Business Application Group services
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Microsoft regularly sends communications regarding service incidents, service changes, maintenance, releases, and customer action needed. These communications come primarily in the form of a post to the Microsoft 365 Service health dashboard and the Message center.  From time-to-time we will also use direct email communications to provide status, updates, or information about the service.  
 
@@ -35,31 +38,31 @@ The notifications sent from the Business Application Group communications team w
 | Dynamics 365 Marketing | msdynamics365@microsoft.com |
 | Dynamics 365 Market Insights | marketinsights@microsoft.com|
 | Dynamics 365 Finance & Operations    | msdyn365finops@microsoft.com| 
-| Microsoft Power Automate  | msflow@microsoft.com| 
+| Microsoft Power Automate  | mspowerautomate@microsoft.com| 
 | Microsoft Power Apps | mspowerapps@microsoft.com| 
 | Microsoft Power BI  | mspowerbi@microsoft.com| 
 
 
-Email notifications are sent to Common Data Service users who have the System Administrator role in an impacted environment.  If you want to change who receives email communications, see [Manage email notifications](../admin/manage-email-notifications.md).
+Email notifications are sent to Microsoft Dataverse users who have the System Administrator role in an impacted environment.  If you want to change who receives email communications, see [Manage email notifications](../admin/manage-email-notifications.md).
 
 ## Incident Communications
 Major service incident emails can easily be identified by the red banner.
 
-![Service incident email banner](../admin/media/service-incident-banner.png "Service incident email banner")  
+![Service incident email banner](../admin/media/Interruption-Notification-Banner.png "Interruption Notification Banner")  
  
-Microsoft will send you an email when normal system services have been restored. You can easily identify these emails by the light-green banner.
+Microsoft will send you an email when normal system services have been restored. You can easily identify these emails by the green banner.
 
-![Service restored email banner](../admin/media/service-restored-banner.png "Service restored email banner")  
+![Service restored email banner](../admin/media/Restored-Notification-Banner.png "Restored Notification Banner")  
  
 ## Maintenance communications 
 Planned maintenance includes updates and changes to the service to provide increased stability, reliability, and performance. Planned and unplanned maintenance emails can be identified by the light-orange banner.
 
-![Planned and unplanned maintenance banner](../admin/media/maintenance-banner.png "Planned and unplanned maintenance banner")
+![Planned and unplanned maintenance banner](../admin/media/Maintenance-Notification-Banner.png "Maintenance Notification Banner")
 
 ## Communications for releases, package deployments, and awareness
 Communications can be informational in nature, drive specific actions, or both. The target audience for these communications are System Administrators or individuals designated to run the service. You can easily identify these by the light-blue banner.
 
-![General awareness email banner](../admin/media/scheduling-banner.png "General awareness email banner") 
+![General awareness email banner](../admin/media/Customer-Notification-Banner.png "Customer Notification Banner") 
  
 Power BI will display with the following yellow banner:
  
@@ -73,7 +76,7 @@ Power BI will display with the following yellow banner:
 Action requested notifications are sent when we detect that a configuration or a setting for your environment is causing the service to perform below expectations. The notification will include details on the situation as well as guidance on how to return performance to normal.
 
 ## Post-purchase customer lifecycle communications
-Once a customer has purchased model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service, we send a series of email communications to administrators during the first year. These communications direct customers to a number of resources that will assist both administrators and users to successfully adopt and expand their use of model-driven apps in Dynamics 365.
+Once a customer has purchased customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), we send a series of email communications to administrators during the first year. These communications direct customers to a number of resources that will assist both administrators and users to successfully adopt and expand their use of customer engagement apps.
 
 You can easily identify these communications by the dark-blue banner.
 

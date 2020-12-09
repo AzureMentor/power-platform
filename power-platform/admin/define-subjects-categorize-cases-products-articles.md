@@ -6,20 +6,19 @@ manager: shujoshi
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 10/01/2018
+ms.date: 09/04/2020
 ms.author: shujoshi
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Define subjects to categorize cases, products, and articles
 
-[!INCLUDE [cc-settings-moving](../includes/cc-settings-moving.md)] 
-
-Model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service, include a subject organizational structure that lets you mark and categorize service cases, knowledge base articles, products, and sales literature. By using the subject hierarchy, you can classify service cases to quickly provide service to your customer. You can also provide the appropriate sales literature. You’ll also be able to better understand gaps in your sales literature, evaluate service quality by subject area, and improve reporting on the performance of your products.  
+The customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), include a subject organizational structure that lets you mark and categorize service cases, knowledge base articles, products, and sales literature. By using the subject hierarchy, you can classify service cases to quickly provide service to your customer. You can also provide the appropriate sales literature. You'll also be able to better understand gaps in your sales literature, evaluate service quality by subject area, and improve reporting on the performance of your products.  
 
 > [!NOTE]
 > With the version 9.1 release, subjects in service management are available in the Customer Service Hub based on the Unified Interface experience. We recommend that you manage subjects using the new experience.
@@ -34,14 +33,12 @@ Model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Servi
    - Select a subject from the tree and select **Edit subject** to edit a subject
    - Select a subject from the tree and select **Remove subject** to delete a subject
 
-   ![subjects-csh](media/subjects-csh.png)
+   ![Quick create](media/subjects-csh.png)
 
 
 ## Create or edit a subject  (Customer Service app) 
   
-1. [!INCLUDE[proc_settings_bus_management](../includes/proc-settings-bus-management.md)] Select **Subjects**. You can also get there by going to **Settings** > **Service Management** > **Subjects**.  
-
-
+1. In the web app, go to **Settings** > **Business Management**. Select **Subjects**. You can also get there by going to **Settings** > **Service Management** > **Subjects**.  
   
 2. To add a subject, under **Common Tasks**, select **Add a Subject**.  
   

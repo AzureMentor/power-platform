@@ -2,22 +2,24 @@
 title: "Add a Partner of Record (POR)  | MicrosoftDocs"
 description: Add a Partner of Record (POR)
 author: jimholtz
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 06/18/2019
+ms.date: 07/16/2020
 ms.author: jimholtz
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Add a Partner of Record (POR) to your subscription
 
-You can choose to work with a designated Microsoft partner who can provide the sales and technical expertise you need to help set up, customize, deploy, and administer your Common Data Service environments. You can find a designated Partner of Record (POR) on the [Microsoft Partner Center](https://partnercenter.microsoft.com/pcv/register/joinnow/enrollmentWelcome/valueaddedreseller) site. Once you find a partner, request their Microsoft Partner ID and designate them in the [!INCLUDE[pn_office_365_admin_center](../includes/pn-office-365-admin-center.md)].  
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
+You can choose to work with a designated Microsoft partner who can provide the sales and technical expertise you need to help set up, customize, deploy, and administer your Microsoft Dataverse environments. You can find a designated Partner of Record (POR) on the [Microsoft Partner Center](https://partnercenter.microsoft.com/pcv/register/joinnow/enrollmentWelcome/valueaddedreseller) site. Once you find a partner, request their Microsoft Partner ID and designate them in the [!INCLUDE[pn_office_365_admin_center](../includes/pn-office-365-admin-center.md)].  
   
 ## Add a partner at time of purchase  
 
@@ -45,7 +47,7 @@ You can choose to work with a designated Microsoft partner who can provide the s
 
 1. [!INCLUDE[proc_office365_signin](../includes/proc-office365-signin.md)]  
   
-2. Go to **Billing** > **Products & services** and select a subscription.  
+2. Go to **Billing** > **Your products** and select a subscription.  
   
 3. Under the subscription, select the **Partner** tab.
   

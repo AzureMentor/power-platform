@@ -6,14 +6,15 @@ manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 10/14/2019
+ms.date: 06/04/2020
 ms.author: jimholtz
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Change the environment type
 
@@ -24,18 +25,18 @@ You may decide that your customization work developed and tested on a sandbox en
 
 **To change the environment type**: 
 
-1. Go to the [Power Platform Admin center](https://admin.powerplatform.microsoft.com) and sign in using Environment Admin or System Administrator role credentials.
+1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com) and sign in using Environment Admin or System Administrator role credentials.
 
 2. From the left-side menu, select **Environments**, and then select an environment to change.
 
-3. Select **Edit**
+3. Select **Convert to production** or **Convert to sandbox**.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/select-edit.png "Select Edit")
+   > ![Convert to production](media/convert-production.png "Convert to production")
 
-4. Under **Type**, choose the environment type to change to. 
+4. Select **Continue**. 
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/switch-environment.png "Select environment type")
+   > ![Select Continue](media/switch-environment.png "Select Continue")
 
-5. Select **Save**.
+5. On the confirmation page, select  **OK**.

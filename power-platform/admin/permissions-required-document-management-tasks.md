@@ -10,12 +10,15 @@ ms.date: 09/30/2017
 ms.author: matp
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Permissions required for document management tasks
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 The following table shows the default security roles or other permissions that are needed to perform each document management with [!INCLUDE[pn_ms_SharePoint_long](../includes/pn-ms-sharepoint-long.md)] task.  
   

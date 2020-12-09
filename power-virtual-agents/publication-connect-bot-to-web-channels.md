@@ -1,28 +1,34 @@
 ---
-title: "Configure a Power Virtual Agents bot for a live or demo website"
+title: "Configure a chatbot for a live or demo website"
 description: "You can use a prebuilt demo website to try out your bot, or you can publish it directly to your own webpage using an IFrame code snippet."
-keywords: "Publish, channel, connector, sample code, developer, extensibility"
-ms.date: 11/25/2019
-ms.service:
-  - dynamics-365-ai
+keywords: "Publish, channel, connector, sample code, developer, extensibility, PVA"
+ms.date: 9/22/2020
+ms.service: power-virtual-agents
 ms.topic: article
 author: iaanw
 ms.author: iawilt
 manager: shellyha
-ms.custom: "publication, authoring"
+ms.custom: "publication, authoring, ceX"
 ms.collection: virtual-agent
 ---
 
 # Configure the demo website and add the bot to your live website
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
-
 When publishing the bot to the web, you can publish to a prebuilt demo website (which you can use to share the bot with your teammates and stakeholders) and to your own live website.
+  
+>  
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4mGa9]
+>  
 
 > [!TIP]
 > **When should I use the demo website and when should I use my own website?** <br/>
 > You should use the demo website only to try out the bot and share it with your teammates or other stakeholders who want to try out the bot. It's not intended for production uses, for example, you shouldn't use it directly with customers. <br/>
 > You should publish and use the bot on your live website for production scenarios, such as a help bot on your help webpage for customers to interact with.
+
+## Prerequisites
+
+- [!INCLUDE [Medical and emergency usage](includes/pva-usage-limitations.md)]
+
 
 ## Demo website
 You can edit the welcome message and suggested trigger phrases for the demo website. This helps prompt your teammates for what they should ask the bot about. 
@@ -48,7 +54,7 @@ To share the demo website link, simply copy the demo website URL and share it wi
 
 You can add your bot to a live website as an IFrame. Your live website can be a customer-facing external website or an internal site, like a SharePoint or Yammer site.
 
-You can also add the bot to your Power Apps portal.
+You can also add the bot to your Power Platform admin center.
 
 **Add bot to your website:**
 
@@ -60,25 +66,25 @@ You can also add the bot to your Power Apps portal.
 
 3. Provide the snippet to your web developer to add the bot to your website.
 
-**Add bot to your Power Apps Portal:**
+**Add bot to Power Apps:**
 
 1. In the Power Virtual Agents Portal, select **Manage** on the side navigation pane, and then go to the **Channels** tab.
 
-1. Select **Custom website** and then copy only the URL of the IFframe snippet: this is the URL defined by `src="<URL>"`.
+1. Select **Custom website** and then copy only the URL of the IFrame snippet: this is the URL defined by `src="<URL>"`.
 
     ![Select only the src URL](media/channel-custom-website-url.png)
 
-1. Go to Power Apps Portal Studio and add an [IFrame component](/powerapps/maker/portals/compose-page#add-iframe) into your Portal by selecting **Components** on the side navigation pane, and then **IFrame**.
+1. Go to Power Apps Studio and add an [IFrame component](/powerapps/maker/portals/compose-page#add-iframe) into your app by selecting **Components** on the side navigation pane, and then **IFrame**.
 
-    ![Add IFrame to Power Apps Portal](media/channel-custom-website-portal-iframe.png)
+    ![Add IFrame to Power Apps](media/channel-custom-website-portal-iframe.png)
 
 1. Paste in the URL you copied from the IFrame snippet into the **Link** field of the IFrame component. You can adjust the size of the chat window by adjusting the **Width** and **Height** field.
 
-    ![Add bot IFrame to Power Apps Portal](media/channel-custom-website-portal-pva-iframe.png)
+    ![Add bot IFrame to Power Apps](media/channel-custom-website-portal-pva-iframe.png)
     
 1. You can interact with your bot by clicking on **Browse website** at the top right corner.
 
-    ![Add bot IFrame to Power Apps Portal](media/channel-custom-website-portal-browse-website.png)
+    ![Browse website with IFrame added](media/channel-custom-website-portal-browse-website.png)
 
 
 

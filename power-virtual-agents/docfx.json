@@ -23,7 +23,8 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif"
         ],
         "exclude": [
           "**/obj/**",
@@ -60,7 +61,11 @@
       ],
       "search.appverid": "met150"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "searchScope": {
+        "**.*": [ "Power Virtual Agents" ]
+      }
+    },
     "template": [],
     "dest": "power-virtual-agents",
     "markdownEngineName": "markdig"

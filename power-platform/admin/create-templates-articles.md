@@ -6,18 +6,21 @@ manager: shujoshi
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 10/01/2018
+ms.date: 03/09/2020
 ms.author: shujoshi
 search.audienceType: 
   - admin
-search.app: 
+search.app:
   - D365CE
   - PowerApps
   - Powerplatform
+  - Flow
 ---
 # Create templates for articles
 
-[!INCLUDE [cc-settings-moving](../includes/cc-settings-moving.md)] 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
+<!-- legacy procedure -->
 
 Article templates help you create new articles for your organization's knowledge base library. You can also create templates with boilerplate text to help article writers use consistent language and messaging.  
 
@@ -32,7 +35,8 @@ Article templates help you create new articles for your organization's knowledge
   
    - [!INCLUDE[proc_dont_have_correct_permissions](../includes/proc-dont-have-correct-permissions.md)]  
   
-2. [!INCLUDE[proc_settings_service_management](../includes/proc-settings-service-management.md)]  
+2. In the web app, go to **Settings** > **Service Management**.
+
 3. Select **Article Templates**. 
   
 4. To create a new article template, select **New**.  
@@ -57,7 +61,7 @@ Article templates help you create new articles for your organization's knowledge
   
 10. To format the text, font, and color of the article title, headings, and body text of each section, use the tools on the **Modify** toolbar.  
   
-11. When you’re done, select **Save** or **Save and close**.  
+11. When you're done, select **Save** or **Save and close**.  
   
      After you save the template, it is immediately available for use. If the template is not complete and you want to finish it later, you can save the template, deactivate it (make it ready-only), and then complete it later. When the template is complete, you can reactivate it.  
   

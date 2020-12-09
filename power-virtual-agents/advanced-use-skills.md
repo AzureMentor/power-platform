@@ -1,29 +1,39 @@
 ---
-title: "Use Microsoft Bot Framework Skills in Power Virtual Agents"
+title: "Use Microsoft Bot Framework Skills"
 description: "Extend your bot and author complex bot dialogs using pro-code tools to build Microsoft Bot Framework Skills that enable the bot to book an appointment, send a confirmation email, manage tasks, and more."
-keywords: "authoring, extensibility, integration, extend bot, bot framework, skills, custom capabilities"
-ms.date: 12/16/2019
-ms.service:
-  - dynamics-365-ai
+keywords: "authoring, extensibility, integration, extend bot, bot framework, skills, custom capabilities, PVA"
+ms.date: 9/22/2020
+ms.service: power-virtual-agents
 ms.topic: article
 author: iaanw
 ms.author: iawilt
 manager: shellyha
-ms.custom: "azure, advanced-authoring"
+ms.custom: "Azure, advanced-authoring, ceX"
 ms.collection: virtual-agent
 ---
 
 
 # Use Microsoft Bot Framework Skills in Power Virtual Agents
 
-[This topic is pre-release documentation and is subject to change.]
+
+Select the version of Power Virtual Agents you're using here:
+
+> [!div class="op_single_selector"]
+> - [Power Virtual Agents web app](advanced-use-skills.md)
+> - [Power Virtual Agents app in Microsoft Teams](teams/advanced-use-skills-teams.md)
 
 Power Virtual Agents enables you to extend your bot using Microsoft Bot Framework Skills. If you have already built and deployed bots in your organization (using Bot Framework pro-code tools) for specific scenarios, you can convert bots to a Skill and embed the Skill within a Power Virtual Agents bot.
+
+## Prerequisites
+
+- [!INCLUDE [Medical and emergency usage](includes/pva-usage-limitations.md)]
+- [Review restrictions and validation for skills used in Power Virtual Agents](/azure/bot-service/skill-pva)
+
 
 ## Add a Skill to bot conversations
 First, [create a Power Virtual Agents bot](authoring-first-bot.md) and [create and deploy the Skill using pro-code tools](https://go.microsoft.com/fwlink/?linkid=2110533) into your organization.
 
-Next, [register a Skill in Power Virtual Agent](configuration-add-skills.md).
+Next, [register a Skill in Power Virtual Agents](configuration-add-skills.md).
 
 **Add a Skill into a conversation:**
 
